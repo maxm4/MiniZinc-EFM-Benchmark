@@ -1,0 +1,1 @@
+MiniZincError('F0409 18:14:44.829990  626057 cp_model_fz_solver.cc:1277] Check failed: !fz_var->domain.is_float CP-SAT does not support float variables\n*** Check failure stack trace: ***')

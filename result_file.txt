@@ -1,0 +1,13 @@
+{'chuffed_int': {'nb': 4, 'time': 1.254},
+ 'coin-bc_int': {'nb': 5, 'time': 1.894},
+ 'cplex_float': {'nb': 47, 'time': 18.362},
+ 'cplex_int': {'nb': 5, 'time': 1.897},
+ 'gecode_int': {'nb': 4, 'time': 1.385},
+ 'gist_int': {'nb': 4, 'time': 1.397},
+ 'gurobi_float': {'time': 4.5},
+ 'gurobi_int': {'time': 1.25},
+ 'highs_int': {'nb': 4, 'time': 1.699},
+ 'sat_int': {'nb': 0},
+ 'scip_float': {'nb': 5, 'time': 2.631},
+ 'scip_int': {'nb': 7, 'time': 3.208},
+ 'xpress_int': {}}

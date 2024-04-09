@@ -1,0 +1,2 @@
+{'type': 'error', 'what': 'plugin loading error', 'message': 'Failed to load plugin. Tried libxprs, /opt/xpressmp/lib/libxprs.so'}
+MiniZincError('Failed to load plugin. Tried libxprs, /opt/xpressmp/lib/libxprs.so')

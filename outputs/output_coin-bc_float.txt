@@ -1,0 +1,2 @@
+{'type': 'error', 'what': 'flattening error', 'location': {'filename': '/tmp/mzn_fragmentr1pht15f.mzn', 'firstLine': 17, 'firstColumn': 1, 'lastLine': 17, 'lastColumn': 33}, 'message': 'variable X_INTRODUCED_51_ needs finite bounds for linearisation. Or, use indicator constraints. Current domain is [[ [ -inf, 0.000999 ] [ 0.001, inf ] ]]'}
+MiniZincError('variable X_INTRODUCED_51_ needs finite bounds for linearisation. Or, use indicator constraints. Current domain is [[ [ -inf, 0.000999 ] [ 0.001, inf ] ]]')

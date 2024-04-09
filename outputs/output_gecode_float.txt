@@ -1,0 +1,1 @@
+MiniZincError('Error: Gecode: Float::linear: Number out of limits')
