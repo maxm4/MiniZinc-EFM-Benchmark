@@ -1,0 +1,11 @@
+n = 6;
+m = 2;
+k = 1;
+Rs = ["R_R1", "R_R1_rev", "R_T1", "R_T2", "R_T3", "R_T4"];
+Ms = ["M_A", "M_B"];
+S = [|-1.0, 1.0, 1.0, 0.0, -1.0, 0.0,| 
+  1.0, -1.0, 0.0, 1.0, 0.0, -1.0|]; 
+Revs = [|1, 1, 0, 0, 0, 0|]; 
+
+{'type': 'error', 'what': 'error', 'message': '  MIPGurobiWrapper runtime error:  HostID mismatch (licensed to 71e0f077, hostid is 2842e7d0)\nMessage from caller: Could not open GUROBI environment.'}
+MiniZincError('  MIPGurobiWrapper runtime error:  HostID mismatch (licensed to 71e0f077, hostid is 2842e7d0)\nMessage from caller: Could not open GUROBI environment.')

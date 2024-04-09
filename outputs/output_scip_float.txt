@@ -1,0 +1,41 @@
+n = 6;
+m = 2;
+k = 1;
+Rs = ["R_R1", "R_R1_rev", "R_T1", "R_T2", "R_T3", "R_T4"];
+Ms = ["M_A", "M_B"];
+S = [|-1.0, 1.0, 1.0, 0.0, -1.0, 0.0,| 
+  1.0, -1.0, 0.0, 1.0, 0.0, -1.0|]; 
+Revs = [|1, 1, 0, 0, 0, 0|]; 
+
+["R_R1", "R_R1_rev", "R_T1", "R_T2", "R_T3", "R_T4"]
+[0.0, 0.0, 1e-06, 0.0, 1e-06, 0.0]
+[false, false, true, false, true, false]
+
+Sols1 = [false, false, true, false, true, false];
+array[Reactions] of bool:  Sols1;
+constraint sum(j in Reactions)(Zs[j] * Sols1[j]) < 2;
+
+["R_R1", "R_R1_rev", "R_T1", "R_T2", "R_T3", "R_T4"]
+[0.0, 0.0, 0.0, 1e-06, 0.0, 1e-06]
+[false, false, false, true, false, true]
+
+Sols2 = [false, false, false, true, false, true];
+array[Reactions] of bool:  Sols2;
+constraint sum(j in Reactions)(Zs[j] * Sols2[j]) < 2;
+
+["R_R1", "R_R1_rev", "R_T1", "R_T2", "R_T3", "R_T4"]
+[1e-06, 0.0, 1e-06, 0.0, 0.0, 1e-06]
+[true, false, true, false, false, true]
+
+Sols3 = [true, false, true, false, false, true];
+array[Reactions] of bool:  Sols3;
+constraint sum(j in Reactions)(Zs[j] * Sols3[j]) < 3;
+
+["R_R1", "R_R1_rev", "R_T1", "R_T2", "R_T3", "R_T4"]
+[0.0, 1e-06, 0.0, 1e-06, 1e-06, 0.0]
+[false, true, false, true, true, false]
+
+Sols4 = [false, true, false, true, true, false];
+array[Reactions] of bool:  Sols4;
+constraint sum(j in Reactions)(Zs[j] * Sols4[j]) < 3;
+
