@@ -1,11 +1,2 @@
-n = 6;
-m = 2;
-k = 1;
-Rs = ["R_R1", "R_R1_rev", "R_T1", "R_T2", "R_T3", "R_T4"];
-Ms = ["M_A", "M_B"];
-S = [|-1.0, 1.0, 1.0, 0.0, -1.0, 0.0,| 
-  1.0, -1.0, 0.0, 1.0, 0.0, -1.0|]; 
-Revs = [|1, 1, 0, 0, 0, 0|]; 
-
 {'type': 'error', 'what': 'plugin loading error', 'message': 'Failed to load plugin. Tried libxprs, /opt/xpressmp/lib/libxprs.so'}
 MiniZincError('Failed to load plugin. Tried libxprs, /opt/xpressmp/lib/libxprs.so')
