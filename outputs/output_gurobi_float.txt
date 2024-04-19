@@ -1,580 +1,283 @@
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.111111123108799e-07, 1.333333322861563e-06, 1.222222216767932e-06, 0.0, 1.111111109786123e-07, 1.000000000000001e-06, 0.0, 1.000000000000001e-06, 0.0, 1.111111103568874e-06, 0.0, 0.0, 0.0, 1.333333322861563e-06, 0.0, 0.0, 3.333333310706621e-06, 1.332267629550188e-15, 1.111111123108799e-07, 0.0]
-[false, true, true, false, false, true, false, true, false, true, false, false, false, true, false, false, true, false, false, false]
-
-Sols1 = [false, true, true, false, false, true, false, true, false, true, false, false, false, true, false, false, true, false, false, false];
-array[Reactions] of bool:  Sols1;
-constraint sum(j in Reactions)(Zs[j] * Sols1[j]) < 7;
-
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.111111116200745e-07, 1.333333339440894e-06, 1.22222222782082e-06, 0.0, 1.111111116200745e-07, 1.000000004580671e-06, 0.0, 1.000000004580671e-06, 0.0, 1.111111116200745e-06, 0.0, 0.0, 0.0, 0.0, 1.333333339440894e-06, 0.0, 3.333333348602234e-06, 0.0, 1.111111116200745e-07, 0.0]
-[false, true, true, false, false, true, false, true, false, true, false, false, false, false, true, false, true, false, false, false]
-
-Sols2 = [false, true, true, false, false, true, false, true, false, true, false, false, false, false, true, false, true, false, false, false];
-array[Reactions] of bool:  Sols2;
-constraint sum(j in Reactions)(Zs[j] * Sols2[j]) < 7;
-
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.111111111111112e-07, 1.333333333333334e-06, 1.222222222222223e-06, 0.0, 1.111111111111112e-07, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 1.111111111111112e-06, 0.0, 0.0, 0.0, 1.333333333333334e-06, 0.0, 0.0, 3.333333333333334e-06, 0.0, 1.111111111111112e-07, 0.0]
-[false, true, true, false, false, true, true, false, false, true, false, false, false, true, false, false, true, false, false, false]
-
-Sols3 = [false, true, true, false, false, true, true, false, false, true, false, false, false, true, false, false, true, false, false, false];
-array[Reactions] of bool:  Sols3;
-constraint sum(j in Reactions)(Zs[j] * Sols3[j]) < 7;
-
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 2.500000000000001e-06, 0.0, 3.500000000000001e-06, 0.0, 0.0, 0.0, 1.000000000000001e-06, 9.000000000000002e-06, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 2.000000000000001e-06, 9.000000000000002e-06]
-[true, false, false, false, false, true, false, true, false, false, false, true, true, false, false, false, false, true, true, true]
-
-Sols4 = [true, false, false, false, false, true, false, true, false, false, false, true, true, false, false, false, false, true, true, true];
-array[Reactions] of bool:  Sols4;
-constraint sum(j in Reactions)(Zs[j] * Sols4[j]) < 8;
-
-efm ['Growth', 'R4', 'R5b', 'R8_rev', 'Rres', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 2.5e-06, 3.500000000000001e-06, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 9.000000000000002e-06, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 2.000000000000001e-06, 9.000000000000002e-06]
-[true, false, false, false, false, true, true, false, false, false, false, true, true, false, false, false, false, true, true, true]
-
-Sols5 = [true, false, false, false, false, true, true, false, false, false, false, true, true, false, false, false, false, true, true, true];
-array[Reactions] of bool:  Sols5;
-constraint sum(j in Reactions)(Zs[j] * Sols5[j]) < 8;
-
-efm ['Growth', 'R4', 'R5a', 'R8_rev', 'Rres', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.111111105345231e-07, 1.33333332463792e-06, 1.222222216767932e-06, 0.0, 1.111111105345231e-07, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 1.111111110674302e-06, 0.0, 0.0, 0.0, 0.0, 1.33333332463792e-06, 0.0, 3.333333332022904e-06, 0.0, 1.111111105345231e-07, 0.0]
-[false, true, true, false, false, true, true, false, false, true, false, false, false, false, true, false, true, false, false, false]
-
-Sols6 = [false, true, true, false, false, true, true, false, false, true, false, false, false, false, true, false, true, false, false, false];
-array[Reactions] of bool:  Sols6;
-constraint sum(j in Reactions)(Zs[j] * Sols6[j]) < 7;
-
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 24.0, 0.0, 20.0, 0.0, 24.0, 16.0, 0.0, 0.0, 0.0, 60.0, 4.0, 28.0, 16.0]
-[true, false, false, false, false, false, false, true, false, true, false, true, true, false, false, false, true, true, true, true]
-
-Sols7 = [true, false, false, false, false, false, false, true, false, true, false, true, true, false, false, false, true, true, true, true];
-array[Reactions] of bool:  Sols7;
-constraint sum(j in Reactions)(Zs[j] * Sols7[j]) < 9;
-
-efm ['Growth', 'R5b', 'R7', 'R8_rev', 'Rres', 'Te', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 24.0, 0.0, 0.0, 20.0, 0.0, 24.0, 16.0, 0.0, 0.0, 0.0, 60.0, 4.0, 28.0, 16.0]
-[true, false, false, false, false, false, true, false, false, true, false, true, true, false, false, false, true, true, true, true]
-
-Sols8 = [true, false, false, false, false, false, true, false, false, true, false, true, true, false, false, false, true, true, true, true];
-array[Reactions] of bool:  Sols8;
-constraint sum(j in Reactions)(Zs[j] * Sols8[j]) < 9;
-
-efm ['Growth', 'R5a', 'R7', 'R8_rev', 'Rres', 'Te', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 0.0, 0.0, 1.000000001027957e-06, 1.000000001027957e-06, 1.999999952317922e-06, 0.0, 3.999999975690117e-06, 0.0, 0.0, 0.0, 2.000000012714054e-06, 9.999999981857855e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 3.000000013742011e-06, 9.999999981857855e-06]
-[true, false, false, true, true, true, false, true, false, false, false, true, true, false, false, false, false, false, true, true]
-
-Sols9 = [true, false, false, true, true, true, false, true, false, false, false, true, true, false, false, false, false, false, true, true];
-array[Reactions] of bool:  Sols9;
-constraint sum(j in Reactions)(Zs[j] * Sols9[j]) < 9;
-
-efm ['Growth', 'R2_rev', 'R3', 'R4', 'R5b', 'R8_rev', 'Rres', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.400000000817415e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.400000001845371e-06, 1.000000001027957e-06, 0.0, 0.0, 2.400000000957193e-06, 9.600000007381482e-06, 0.0, 0.0, 3.00000000308387e-06, 0.0, 1.400000000817415e-06, 3.800000001774607e-06, 9.600000007381482e-06]
-[true, false, false, false, false, false, false, true, true, false, false, true, true, false, false, true, false, true, true, true]
-
-Sols10 = [true, false, false, false, false, false, false, true, true, false, false, true, true, false, false, true, false, true, true, true];
-array[Reactions] of bool:  Sols10;
-constraint sum(j in Reactions)(Zs[j] * Sols10[j]) < 9;
-
-efm ['Growth', 'R5b', 'R6', 'R8_rev', 'Rres', 'Td', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.400000000817415e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 2.400000001845371e-06, 0.0, 1.000000001027957e-06, 0.0, 0.0, 2.400000000957193e-06, 9.600000007381482e-06, 0.0, 0.0, 3.00000000308387e-06, 0.0, 1.400000000817415e-06, 3.800000001774607e-06, 9.600000007381482e-06]
-[true, false, false, false, false, false, true, false, true, false, false, true, true, false, false, true, false, true, true, true]
-
-Sols11 = [true, false, false, false, false, false, true, false, true, false, false, true, true, false, false, true, false, true, true, true];
-array[Reactions] of bool:  Sols11;
-constraint sum(j in Reactions)(Zs[j] * Sols11[j]) < 9;
-
-efm ['Growth', 'R5a', 'R6', 'R8_rev', 'Rres', 'Td', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.000000000000003, -2.664535259100375e-15, 0.0, 6.000000000000004, 6.000000000000002, 11.99999999999998, 23.99999999999999, 0.0, 0.0, 0.0, 0.0, 12.00000000000002, 59.99999999999998, 0.0, -2.664535259100375e-15, 0.0, 0.0, 8.881784197001253e-16, 18.00000000000002, 59.99999999999998]
-[true, false, false, true, true, true, true, false, false, false, false, true, true, false, false, false, false, false, true, true]
-
-Sols12 = [true, false, false, true, true, true, true, false, false, false, false, true, true, false, false, false, false, false, true, true];
-array[Reactions] of bool:  Sols12;
-constraint sum(j in Reactions)(Zs[j] * Sols12[j]) < 9;
-
-efm ['Growth', 'R2_rev', 'R3', 'R4', 'R5a', 'R8_rev', 'Rres', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 3.599999985226532e-06, 2.599999998409431e-06, 0.0, 9.999999974752428e-07, 0.0, 0.0, 0.0, 1.599999997381474e-06, 0.0, 0.0, 0.0, 5.199999996818861e-06, 3.599999985226532e-06, 0.0, 4.799999992144422e-06, 0.0, 3.552713678800501e-15, 1.000000001027957e-06, 5.199999996818861e-06]
-[true, true, true, false, true, false, false, false, true, false, false, false, true, true, false, true, false, false, true, true]
-
-Sols13 = [true, true, true, false, true, false, false, false, true, false, false, false, true, true, false, true, false, false, true, true];
-array[Reactions] of bool:  Sols13;
-constraint sum(j in Reactions)(Zs[j] * Sols13[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R6', 'Rres', 'Tc1', 'Td', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 3.599999985226532e-06, 2.599999998409431e-06, 0.0, 9.999999974752428e-07, 0.0, 0.0, 0.0, 1.599999997381474e-06, 0.0, 0.0, 0.0, 5.199999996818861e-06, 0.0, 3.599999985226532e-06, 4.799999992144422e-06, 0.0, 3.552713678800501e-15, 1.000000001027957e-06, 5.199999996818861e-06]
-[true, true, true, false, true, false, false, false, true, false, false, false, true, false, true, true, false, false, true, true]
-
-Sols14 = [true, true, true, false, true, false, false, false, true, false, false, false, true, false, true, true, false, false, true, true];
-array[Reactions] of bool:  Sols14;
-constraint sum(j in Reactions)(Zs[j] * Sols14[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R6', 'Rres', 'Tc2', 'Td', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.666666666666667, 6.666666666666667, 6.666666666666667, 0.0, 0.0, 23.33333333333334, 0.0, 23.33333333333334, 0.0, 0.0, 0.0, 0.0, 60.0, 6.666666666666667, 0.0, 0.0, 0.0, 6.666666666666667, 6.666666666666667, 60.0]
-[true, true, true, false, false, true, false, true, false, false, false, false, true, true, false, false, false, true, true, true]
-
-Sols15 = [true, true, true, false, false, true, false, true, false, false, false, false, true, true, false, false, false, true, true, true];
-array[Reactions] of bool:  Sols15;
-constraint sum(j in Reactions)(Zs[j] * Sols15[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R4', 'R5b', 'Rres', 'Tc1', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 2.400000002467095e-06, 2.400000002467096e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 1.40000000143914e-06, 0.0, 0.0, 0.0, 4.800000004934192e-06, 2.400000002467095e-06, 0.0, 4.200000004317419e-06, 0.0, 1.000000001027957e-06, 1.000000001027957e-06, 4.800000004934192e-06]
+[9.999996163637842e-07, 1.999999232727569e-06, 1.999999232727569e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 9.999996163637842e-07, 0.0, 0.0, 0.0, 3.999998465455137e-06, 1.999999232727569e-06, 0.0, 2.999998849091353e-06, 0.0, 9.999996163637842e-07, 9.999996163637842e-07, 3.999998465455137e-06]
 [true, true, true, false, false, false, false, false, true, false, false, false, true, true, false, true, false, true, true, true]
 
-Sols16 = [true, true, true, false, false, false, false, false, true, false, false, false, true, true, false, true, false, true, true, true];
-array[Reactions] of bool:  Sols16;
-constraint sum(j in Reactions)(Zs[j] * Sols16[j]) < 10;
+Sols1 = [true, true, true, false, false, false, false, false, true, false, false, false, true, true, false, true, false, true, true, true];
+array[Reactions] of bool:  Sols1;
+constraint sum(j in Reactions)(Zs[j] * Sols1[j]) < 10;
 
 efm ['Growth', 'R1', 'R2', 'R6', 'Rres', 'Tc1', 'Td', 'Tf', 'Th', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 3.00000000308387e-06, 2.000000002055913e-06, 0.0, 1.000000001027957e-06, 0.0, 0.0, 9.000000009251608e-06, 0.0, 1.000000001027957e-05, 0.0, 9.000000009251608e-06, 0.0, 3.00000000308387e-06, 0.0, 0.0, 3.00000000308387e-05, 0.0, 1.000000001027957e-05, 0.0]
-[true, true, true, false, true, false, false, true, false, true, false, true, false, true, false, false, true, false, true, false]
+[0.5188679248545702, 5.188679248545701, 4.669811323691131, 0.0, 0.5188679248545702, 3.63207547398199, 0.0, 3.63207547398199, 0.0, 4.150943398836561, 0.0, 0.0, 0.0, 0.0, 5.188679248545701, 0.0, 12.45283019650969, 0.0, 0.5188679248545702, 0.0]
+[true, true, true, false, true, true, false, true, false, true, false, false, false, false, true, false, true, false, true, false]
 
-Sols17 = [true, true, true, false, true, false, false, true, false, true, false, true, false, true, false, false, true, false, true, false];
-array[Reactions] of bool:  Sols17;
-constraint sum(j in Reactions)(Zs[j] * Sols17[j]) < 10;
+Sols2 = [true, true, true, false, true, true, false, true, false, true, false, false, false, false, true, false, true, false, true, false];
+array[Reactions] of bool:  Sols2;
+constraint sum(j in Reactions)(Zs[j] * Sols2[j]) < 10;
 
-efm ['Growth', 'R1', 'R2', 'R3', 'R5b', 'R7', 'R8_rev', 'Tc1', 'Te', 'Th']
+efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5b', 'R7', 'Tc2', 'Te', 'Th']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 2.400000002467096e-06, 2.400000002467096e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 1.40000000143914e-06, 0.0, 0.0, 0.0, 4.800000004934192e-06, 0.0, 2.400000002467096e-06, 4.200000004317419e-06, 0.0, 1.000000001027957e-06, 1.000000001027957e-06, 4.800000004934192e-06]
-[true, true, true, false, false, false, false, false, true, false, false, false, true, false, true, true, false, true, true, true]
+[12.49999970000001, 25.00000000000001, 24.99999900000001, 0.0, 1.000000000000001e-06, 1.000000000000001e-06, 2.000000000000001e-06, 0.0, 12.49999930000001, 1.000000000000001e-06, 0.0, 1.000000000000001e-06, 50.0, 0.0, 25.00000000000001, 37.49999790000002, 3.000000000000001e-06, 12.49999870000001, 12.50000070000001, 50.0]
+[true, true, true, false, true, true, true, false, true, true, false, true, true, false, true, true, true, true, true, true]
 
-Sols18 = [true, true, true, false, false, false, false, false, true, false, false, false, true, false, true, true, false, true, true, true];
-array[Reactions] of bool:  Sols18;
-constraint sum(j in Reactions)(Zs[j] * Sols18[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R6', 'Rres', 'Tc2', 'Td', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000004580671e-06, 2.000000009161341e-06, 1.000000004580671e-06, 0.0, 1.000000004580671e-06, 4.000000018322681e-06, 0.0, 4.000000018322681e-06, 0.0, 0.0, 0.0, 0.0, 1.000000004580671e-05, 2.000000009161341e-06, 0.0, 0.0, 0.0, 0.0, 1.000000004580671e-06, 1.000000004580671e-05]
-[true, true, true, false, true, true, false, true, false, false, false, false, true, true, false, false, false, false, true, true]
-
-Sols19 = [true, true, true, false, true, true, false, true, false, false, false, false, true, true, false, false, false, false, true, true];
-array[Reactions] of bool:  Sols19;
-constraint sum(j in Reactions)(Zs[j] * Sols19[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5b', 'Rres', 'Tc1', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.750000001798924e-06, 0.0, 0.0, 1.750000001798924e-06, 1.750000001798924e-06, 0.0, 4.500000004625803e-06, 0.0, 1.000000001027957e-06, 0.0, 0.0, 4.500000004625803e-06, 1.450000001490537e-05, 0.0, 0.0, 3.00000000308387e-06, 0.0, -2.11758236813575e-22, 6.250000006424727e-06, 1.450000001490537e-05]
-[true, false, false, true, true, false, true, false, true, false, false, true, true, false, false, true, false, false, true, true]
-
-Sols20 = [true, false, false, true, true, false, true, false, true, false, false, true, true, false, false, true, false, false, true, true];
-array[Reactions] of bool:  Sols20;
-constraint sum(j in Reactions)(Zs[j] * Sols20[j]) < 10;
-
-efm ['Growth', 'R2_rev', 'R3', 'R5a', 'R6', 'R8_rev', 'Rres', 'Td', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 2.000000000000001e-06, 2.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 8.000000000000002e-06, 0.0, 9.000000000000002e-06, 0.0, 8.000000000000002e-06, 0.0, 2.000000000000001e-06, 0.0, 0.0, 2.700000000000001e-05, 1.000000000000001e-06, 9.000000000000002e-06, 0.0]
-[true, true, true, false, false, false, false, true, false, true, false, true, false, true, false, false, true, true, true, false]
-
-Sols21 = [true, true, true, false, false, false, false, true, false, true, false, true, false, true, false, false, true, true, true, false];
-array[Reactions] of bool:  Sols21;
-constraint sum(j in Reactions)(Zs[j] * Sols21[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R5b', 'R7', 'R8_rev', 'Tc1', 'Te', 'Tf', 'Th']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[4.999999999999994, 0.0, 0.0, 4.999999999999995, 4.999999999999995, 0.0, 0.0, 29.99999999999999, 0.0, 20.0, 0.0, 29.99999999999999, 29.99999999999996, 0.0, 0.0, 0.0, 60.0, -8.881784197001252e-16, 34.99999999999999, 29.99999999999996]
-[true, false, false, true, true, false, false, true, false, true, false, true, true, false, false, false, true, false, true, true]
-
-Sols22 = [true, false, false, true, true, false, false, true, false, true, false, true, true, false, false, false, true, false, true, true];
-array[Reactions] of bool:  Sols22;
-constraint sum(j in Reactions)(Zs[j] * Sols22[j]) < 10;
-
-efm ['Growth', 'R2_rev', 'R3', 'R5b', 'R7', 'R8_rev', 'Rres', 'Te', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[5.000000000000004, 0.0, 0.0, 5.000000000000004, 5.000000000000004, 0.0, 30.00000000000002, 0.0, 0.0, 20.00000000000001, 0.0, 30.00000000000002, 30.00000000000003, 0.0, 0.0, 0.0, 60.00000000000002, 0.0, 35.00000000000003, 30.00000000000003]
-[true, false, false, true, true, false, true, false, false, true, false, true, true, false, false, false, true, false, true, true]
-
-Sols23 = [true, false, false, true, true, false, true, false, false, true, false, true, true, false, false, false, true, false, true, true];
-array[Reactions] of bool:  Sols23;
-constraint sum(j in Reactions)(Zs[j] * Sols23[j]) < 10;
-
-efm ['Growth', 'R2_rev', 'R3', 'R5a', 'R7', 'R8_rev', 'Rres', 'Te', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.250000005725838e-07, 2.500000011451676e-07, 2.500000011451676e-07, 0.0, 0.0, 0.0, 0.0, 1.000000004580671e-06, 0.0, 1.125000005153254e-06, 0.0, 1.000000004580671e-06, 0.0, 0.0, 2.500000011451676e-07, 0.0, 3.375000015459762e-06, 1.250000005725838e-07, 1.125000005153254e-06, 0.0]
-[false, false, false, false, false, false, false, true, false, true, false, true, false, false, false, false, true, false, true, false]
-
-Sols24 = [false, false, false, false, false, false, false, true, false, true, false, true, false, false, false, false, true, false, true, false];
-array[Reactions] of bool:  Sols24;
-constraint sum(j in Reactions)(Zs[j] * Sols24[j]) < 5;
+Sols3 = [true, true, true, false, true, true, true, false, true, true, false, true, true, false, true, true, true, true, true, true];
+array[Reactions] of bool:  Sols3;
+constraint sum(j in Reactions)(Zs[j] * Sols3[j]) < 16;
 
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 7.500000073434876e-06, 6.50000007240692e-06, 0.0, 1.000000004580671e-06, 0.0, 0.0, 0.0, 2.249999981884799e-06, 3.250000029098033e-06, 0.0, 0.0, 0.0, 7.500000073434876e-06, 0.0, 6.749999945654395e-06, 9.750000087294098e-06, -3.5527136788005e-15, 1.000000001027957e-06, 0.0]
-[true, true, true, false, true, false, false, false, true, true, false, false, false, true, false, true, true, false, true, false]
+[3.25e-06, 1.25e-06, 0.0, 1.000000000000001e-06, 2.25e-06, 1.000000000000001e-06, 7.250000000000001e-06, 0.0, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 6.250000000000001e-06, 2.1e-05, 0.0, 1.25e-06, 3.000000000000001e-06, 3.000000000000001e-06, 1.000000000000001e-06, 9.500000000000001e-06, 2.1e-05]
+[true, true, false, true, true, true, true, false, true, true, false, true, true, false, true, true, true, true, true, true]
 
-Sols25 = [true, true, true, false, true, false, false, false, true, true, false, false, false, true, false, true, true, false, true, false];
-array[Reactions] of bool:  Sols25;
-constraint sum(j in Reactions)(Zs[j] * Sols25[j]) < 10;
+Sols4 = [true, true, false, true, true, true, true, false, true, true, false, true, true, false, true, true, true, true, true, true];
+array[Reactions] of bool:  Sols4;
+constraint sum(j in Reactions)(Zs[j] * Sols4[j]) < 16;
 
-efm ['Growth', 'R1', 'R2', 'R3', 'R6', 'R7', 'Tc1', 'Td', 'Te', 'Th']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.666666666666667, 40.0, 40.0, 0.0, 0.0, 0.0, 0.0, 0.0, 13.33333333333334, 20.0, 0.0, 0.0, 0.0, 40.0, 0.0, 40.0, 60.0, 6.666666666666667, 6.666666666666667, 0.0]
-[true, true, true, false, false, false, false, false, true, true, false, false, false, true, false, true, true, true, true, false]
-
-Sols26 = [true, true, true, false, false, false, false, false, true, true, false, false, false, true, false, true, true, true, true, false];
-array[Reactions] of bool:  Sols26;
-constraint sum(j in Reactions)(Zs[j] * Sols26[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R6', 'R7', 'Tc1', 'Td', 'Te', 'Tf', 'Th']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 3.500000000000001e-06, 3.500000000000001e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 9.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-06, 9.000000000000001e-06]
-[true, true, true, false, false, true, true, false, false, false, false, false, true, true, false, false, false, true, true, true]
-
-Sols27 = [true, true, true, false, false, true, true, false, false, false, false, false, true, true, false, false, false, true, true, true];
-array[Reactions] of bool:  Sols27;
-constraint sum(j in Reactions)(Zs[j] * Sols27[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R4', 'R5a', 'Rres', 'Tc1', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 2.000000000000001e-06, 1.000000000000001e-06, 0.0, 1.000000000000001e-06, 4.000000000000003e-06, 4.000000000000003e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-05, 2.000000000000001e-06, 0.0, 0.0, 0.0, 2.117582368135751e-22, 1.000000000000001e-06, 1.000000000000001e-05]
-[true, true, true, false, true, true, true, false, false, false, false, false, true, true, false, false, false, false, true, true]
-
-Sols28 = [true, true, true, false, true, true, true, false, false, false, false, false, true, true, false, false, false, false, true, true];
-array[Reactions] of bool:  Sols28;
-constraint sum(j in Reactions)(Zs[j] * Sols28[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5a', 'Rres', 'Tc1', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 2.000000000000001e-06, 1.000000000000001e-06, 0.0, 1.000000000000001e-06, 4.000000000000001e-06, 0.0, 4.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-05, 0.0, 2.000000000000001e-06, 0.0, 0.0, -2.11758236813575e-22, 1.000000000000001e-06, 1.000000000000001e-05]
-[true, true, true, false, true, true, false, true, false, false, false, false, true, false, true, false, false, false, true, true]
-
-Sols29 = [true, true, true, false, true, true, false, true, false, false, false, false, true, false, true, false, false, false, true, true];
-array[Reactions] of bool:  Sols29;
-constraint sum(j in Reactions)(Zs[j] * Sols29[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5b', 'Rres', 'Tc2', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 3.500000000000001e-06, 0.0, 3.500000000000001e-06, 0.0, 0.0, 0.0, 0.0, 9.000000000000001e-06, 0.0, 1.000000000000001e-06, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-06, 9.000000000000001e-06]
-[true, true, true, false, false, true, false, true, false, false, false, false, true, false, true, false, false, true, true, true]
-
-Sols30 = [true, true, true, false, false, true, false, true, false, false, false, false, true, false, true, false, false, true, true, true];
-array[Reactions] of bool:  Sols30;
-constraint sum(j in Reactions)(Zs[j] * Sols30[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R4', 'R5b', 'Rres', 'Tc2', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 3.00000000308387e-06, 2.000000002055913e-06, 0.0, 1.000000001027957e-06, 5.000000005139782e-06, 4.000000004111826e-06, 0.0, 0.0, 0.0, 1.000000001027957e-06, 0.0, 1.000000001027957e-05, 0.0, 3.00000000308387e-06, 0.0, 0.0, 0.0, 0.0, 1.000000001027957e-05]
-[true, true, true, false, true, true, true, false, false, false, true, false, true, false, true, false, false, false, false, true]
-
-Sols31 = [true, true, true, false, true, true, true, false, false, false, true, false, true, false, true, false, false, false, false, true];
-array[Reactions] of bool:  Sols31;
-constraint sum(j in Reactions)(Zs[j] * Sols31[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5a', 'R8', 'Rres', 'Tc2', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.0, 18.0, 12.0, 0.0, 6.0, 30.0, 0.0, 24.0, 0.0, 0.0, 6.0, 0.0, 60.0, 0.0, 18.0, 0.0, 0.0, 0.0, 0.0, 60.0]
-[true, true, true, false, true, true, false, true, false, false, true, false, true, false, true, false, false, false, false, true]
-
-Sols32 = [true, true, true, false, true, true, false, true, false, false, true, false, true, false, true, false, false, false, false, true];
-array[Reactions] of bool:  Sols32;
-constraint sum(j in Reactions)(Zs[j] * Sols32[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5b', 'R8', 'Rres', 'Tc2', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 2.000000002055913e-06, 2.000000002055913e-06, 0.0, 0.0, 4.500000004625804e-06, 3.500000003597848e-06, 0.0, 0.0, 0.0, 1.000000001027957e-06, 0.0, 9.000000009251608e-06, 0.0, 2.000000002055913e-06, 0.0, 0.0, 1.000000001027957e-06, 0.0, 9.000000009251608e-06]
-[true, true, true, false, false, true, true, false, false, false, true, false, true, false, true, false, false, true, false, true]
-
-Sols33 = [true, true, true, false, false, true, true, false, false, false, true, false, true, false, true, false, false, true, false, true];
-array[Reactions] of bool:  Sols33;
-constraint sum(j in Reactions)(Zs[j] * Sols33[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R4', 'R5a', 'R8', 'Rres', 'Tc2', 'Tf', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.153846153846156, 46.15384615384617, 40.00000000000001, 0.0, 6.153846153846156, 0.0, 0.0, 0.0, 13.84615384615386, 20.00000000000001, 0.0, 0.0, 0.0, 0.0, 46.15384615384617, 41.53846153846157, 60.00000000000002, 0.0, 6.153846153846156, 0.0]
-[true, true, true, false, true, false, false, false, true, true, false, false, false, false, true, true, true, false, true, false]
-
-Sols34 = [true, true, true, false, true, false, false, false, true, true, false, false, false, false, true, true, true, false, true, false];
-array[Reactions] of bool:  Sols34;
-constraint sum(j in Reactions)(Zs[j] * Sols34[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R6', 'R7', 'Tc2', 'Td', 'Te', 'Th']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.666666666666667, 40.0, 40.0, 0.0, 0.0, -8.881784197001252e-16, 0.0, 0.0, 13.33333333333334, 20.0, 0.0, 0.0, 0.0, 0.0, 40.0, 40.0, 60.0, 6.666666666666667, 6.666666666666667, 0.0]
-[true, true, true, false, false, false, false, false, true, true, false, false, false, false, true, true, true, true, true, false]
-
-Sols35 = [true, true, true, false, false, false, false, false, true, true, false, false, false, false, true, true, true, true, true, false];
-array[Reactions] of bool:  Sols35;
-constraint sum(j in Reactions)(Zs[j] * Sols35[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R6', 'R7', 'Tc2', 'Td', 'Te', 'Tf', 'Th']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 3.000000006636583e-06, 2.000000005608627e-06, 0.0, 1.000000001027957e-06, 5.000000008692496e-06, 4.000000004111826e-06, 0.0, 0.0, 0.0, 1.000000004580671e-06, 0.0, 1.000000001027957e-05, 3.000000006636583e-06, 0.0, 0.0, 0.0, 0.0, -3.5527136788005e-15, 1.000000001027957e-05]
-[true, true, true, false, true, true, true, false, false, false, true, false, true, true, false, false, false, false, false, true]
-
-Sols36 = [true, true, true, false, true, true, true, false, false, false, true, false, true, true, false, false, false, false, false, true];
-array[Reactions] of bool:  Sols36;
-constraint sum(j in Reactions)(Zs[j] * Sols36[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5a', 'R8', 'Rres', 'Tc1', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 1.000000001027957e-06, 1.000000001027957e-06, 0.0, 0.0, 3.500000003597848e-06, 3.500000003597848e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 9.000000009251608e-06, 0.0, 1.000000001027957e-06, 0.0, 0.0, 1.000000001027957e-06, 1.000000001027957e-06, 9.000000009251608e-06]
-[true, true, true, false, false, true, true, false, false, false, false, false, true, false, true, false, false, true, true, true]
-
-Sols37 = [true, true, true, false, false, true, true, false, false, false, false, false, true, false, true, false, false, true, true, true];
-array[Reactions] of bool:  Sols37;
-constraint sum(j in Reactions)(Zs[j] * Sols37[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R4', 'R5a', 'Rres', 'Tc2', 'Tf', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 1.000000000000001e-06, 3.000000000000001e-06, 0.0, 4.000000000000001e-06, 0.0, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-05, 0.0, 1.000000000000001e-06, 0.0, 0.0, 0.0, 2.000000000000001e-06, 1.000000000000001e-05]
-[true, true, false, false, true, true, false, true, false, false, false, true, true, false, true, false, false, false, true, true]
-
-Sols38 = [true, true, false, false, true, true, false, true, false, false, false, true, true, false, true, false, false, false, true, true];
-array[Reactions] of bool:  Sols38;
-constraint sum(j in Reactions)(Zs[j] * Sols38[j]) < 10;
-
-efm ['Growth', 'R1', 'R3', 'R4', 'R5b', 'R8_rev', 'Rres', 'Tc2', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 3.000000000000002e-06, 2.000000000000002e-06, 0.0, 1.000000000000001e-06, 0.0, 9.000000000000001e-06, 0.0, 0.0, 1.000000000000001e-05, 0.0, 9.000000000000001e-06, 0.0, 0.0, 3.000000000000002e-06, 0.0, 3.000000000000001e-05, 0.0, 1.000000000000001e-05, 0.0]
-[true, true, true, false, true, false, true, false, false, true, false, true, false, false, true, false, true, false, true, false]
-
-Sols39 = [true, true, true, false, true, false, true, false, false, true, false, true, false, false, true, false, true, false, true, false];
-array[Reactions] of bool:  Sols39;
-constraint sum(j in Reactions)(Zs[j] * Sols39[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R5a', 'R7', 'R8_rev', 'Tc2', 'Te', 'Th']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 2.000000000000002e-06, 2.000000000000002e-06, 0.0, 0.0, 0.0, 8e-06, 0.0, 0.0, 9.000000000000001e-06, 0.0, 8e-06, 0.0, -2.055911593312059e-15, 2.000000002055913e-06, 0.0, 2.700000000000001e-05, 1.000000000000001e-06, 9.000000000000001e-06, 0.0]
-[true, true, true, false, false, false, true, false, false, true, false, true, false, false, true, false, true, true, true, false]
-
-Sols40 = [true, true, true, false, false, false, true, false, false, true, false, true, false, false, true, false, true, true, true, false];
-array[Reactions] of bool:  Sols40;
-constraint sum(j in Reactions)(Zs[j] * Sols40[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R5a', 'R7', 'R8_rev', 'Tc2', 'Te', 'Tf', 'Th']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 1.000000000000001e-06, 3.000000000000001e-06, 0.0, 4.000000000000001e-06, 0.0, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-05, 1.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 2.000000000000001e-06, 1.000000000000001e-05]
-[true, true, false, false, true, true, false, true, false, false, false, true, true, true, false, false, false, false, true, true]
-
-Sols41 = [true, true, false, false, true, true, false, true, false, false, false, true, true, true, false, false, false, false, true, true];
-array[Reactions] of bool:  Sols41;
-constraint sum(j in Reactions)(Zs[j] * Sols41[j]) < 10;
-
-efm ['Growth', 'R1', 'R3', 'R4', 'R5b', 'R8_rev', 'Rres', 'Tc1', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[2.222222222222222, 4.444444444444429, 4.444444444444429, 0.0, 0.0, 0.0, 17.77777777777779, 0.0, 0.0, 20.0, 0.0, 17.77777777777779, 0.0, 4.444444444444429, 0.0, 0.0, 60.0, 2.222222222222222, 20.00000000000001, 0.0]
-[true, true, true, false, false, false, true, false, false, true, false, true, false, true, false, false, true, true, true, false]
-
-Sols42 = [true, true, true, false, false, false, true, false, false, true, false, true, false, true, false, false, true, true, true, false];
-array[Reactions] of bool:  Sols42;
-constraint sum(j in Reactions)(Zs[j] * Sols42[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R5a', 'R7', 'R8_rev', 'Tc1', 'Te', 'Tf', 'Th']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 3.00000000308387e-06, 2.000000002055913e-06, 0.0, 1.000000001027957e-06, 0.0, 9.000000009251608e-06, 0.0, 0.0, 1.000000001027957e-05, 0.0, 9.000000009251608e-06, 0.0, 3.00000000308387e-06, 0.0, 0.0, 3.00000000308387e-05, 0.0, 1.000000001027957e-05, 0.0]
-[true, true, true, false, true, false, true, false, false, true, false, true, false, true, false, false, true, false, true, false]
-
-Sols43 = [true, true, true, false, true, false, true, false, false, true, false, true, false, true, false, false, true, false, true, false];
-array[Reactions] of bool:  Sols43;
-constraint sum(j in Reactions)(Zs[j] * Sols43[j]) < 10;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R5a', 'R7', 'R8_rev', 'Tc1', 'Te', 'Th']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.666666666666667, 13.33333333333334, 13.33333333333334, 0.0, 0.0, 30.00000000000001, 23.33333333333334, 0.0, 0.0, 0.0, 6.666666666666667, 0.0, 60.0, 13.33333333333334, 0.0, 0.0, 0.0, 6.666666666666667, 8.881784197001253e-16, 60.0]
+[9.99999532727492e-07, 1.999999065454984e-06, 1.999999065454984e-06, 0.0, 0.0, 3.499998364546222e-06, 2.49999883181873e-06, 0.0, 0.0, 0.0, 9.99999532727492e-07, 0.0, 6.999996729092443e-06, 1.999999065454984e-06, 0.0, 0.0, 0.0, 9.99999532727492e-07, 0.0, 6.999996729092443e-06]
 [true, true, true, false, false, true, true, false, false, false, true, false, true, true, false, false, false, true, false, true]
 
-Sols44 = [true, true, true, false, false, true, true, false, false, false, true, false, true, true, false, false, false, true, false, true];
-array[Reactions] of bool:  Sols44;
-constraint sum(j in Reactions)(Zs[j] * Sols44[j]) < 10;
+Sols5 = [true, true, true, false, false, true, true, false, false, false, true, false, true, true, false, false, false, true, false, true];
+array[Reactions] of bool:  Sols5;
+constraint sum(j in Reactions)(Zs[j] * Sols5[j]) < 10;
 
 efm ['Growth', 'R1', 'R2', 'R4', 'R5a', 'R8', 'Rres', 'Tc1', 'Tf', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.0, 12.0, 6.0, 0.0, 6.0, 24.0, 24.0, 0.0, 0.0, 0.0, 0.0, 0.0, 60.0, 0.0, 12.0, 0.0, 0.0, 0.0, 6.0, 60.0]
-[true, true, true, false, true, true, true, false, false, false, false, false, true, false, true, false, false, false, true, true]
+[3.000000000000001e-06, 1.000000000000001e-06, 0.0, 1.000000000000001e-06, 2.000000000000001e-06, 0.0, 1.000000000000001e-06, 1.200000000000002e-05, 0.0, 9.000000000000013e-06, 0.0, 1.300000000000002e-05, 1.4e-05, 1.000000000000001e-06, 0.0, 0.0, 2.700000000000004e-05, 1.000000000000001e-06, 1.600000000000002e-05, 1.4e-05]
+[true, true, false, true, true, false, true, true, false, true, false, true, true, true, false, false, true, true, true, true]
 
-Sols45 = [true, true, true, false, true, true, true, false, false, false, false, false, true, false, true, false, false, false, true, true];
-array[Reactions] of bool:  Sols45;
-constraint sum(j in Reactions)(Zs[j] * Sols45[j]) < 10;
+Sols6 = [true, true, false, true, true, false, true, true, false, true, false, true, true, true, false, false, true, true, true, true];
+array[Reactions] of bool:  Sols6;
+constraint sum(j in Reactions)(Zs[j] * Sols6[j]) < 14;
 
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5a', 'Rres', 'Tc2', 'Th', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.666666666666667, 13.33333333333334, 13.33333333333334, 0.0, 0.0, 30.00000000000001, 0.0, 23.33333333333334, 0.0, 0.0, 6.666666666666667, 0.0, 60.0, 0.0, 13.33333333333334, 0.0, 0.0, 6.666666666666667, 0.0, 60.0]
+[9.99999532727492e-07, 1.999999065454984e-06, 1.999999065454984e-06, 0.0, 0.0, 3.499998364546222e-06, 0.0, 2.49999883181873e-06, 0.0, 0.0, 9.99999532727492e-07, 0.0, 6.999996729092443e-06, 0.0, 1.999999065454984e-06, 0.0, 0.0, 9.99999532727492e-07, 0.0, 6.999996729092443e-06]
 [true, true, true, false, false, true, false, true, false, false, true, false, true, false, true, false, false, true, false, true]
 
-Sols46 = [true, true, true, false, false, true, false, true, false, false, true, false, true, false, true, false, false, true, false, true];
-array[Reactions] of bool:  Sols46;
-constraint sum(j in Reactions)(Zs[j] * Sols46[j]) < 10;
+Sols7 = [true, true, true, false, false, true, false, true, false, false, true, false, true, false, true, false, false, true, false, true];
+array[Reactions] of bool:  Sols7;
+constraint sum(j in Reactions)(Zs[j] * Sols7[j]) < 10;
 
 efm ['Growth', 'R1', 'R2', 'R4', 'R5b', 'R8', 'Rres', 'Tc2', 'Tf', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.750000001798924e-06, 0.0, 0.0, 1.750000001798924e-06, 1.750000001798924e-06, 0.0, 0.0, 4.500000004625803e-06, 1.000000001027957e-06, 0.0, 0.0, 4.500000004625803e-06, 1.450000001490537e-05, 0.0, 0.0, 3.00000000308387e-06, 0.0, -2.11758236813575e-22, 6.250000006424727e-06, 1.450000001490537e-05]
-[true, false, false, true, true, false, false, true, true, false, false, true, true, false, false, true, false, false, true, true]
+[1.600000000000001e-06, 2.600000000000001e-06, 2.600000000000001e-06, 0.0, 0.0, 1.000000000000001e-06, 0.0, 2.000000000000001e-06, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 1.000000000000001e-06, 7.200000000000002e-06, 0.0, 2.600000000000001e-06, 3.000000000000001e-06, 3.000000000000001e-06, 1.600000000000001e-06, 2.600000000000001e-06, 7.200000000000002e-06]
+[true, true, true, false, false, true, false, true, true, true, false, true, true, false, true, true, true, true, true, true]
 
-Sols47 = [true, false, false, true, true, false, false, true, true, false, false, true, true, false, false, true, false, false, true, true];
-array[Reactions] of bool:  Sols47;
-constraint sum(j in Reactions)(Zs[j] * Sols47[j]) < 10;
+Sols8 = [true, true, true, false, false, true, false, true, true, true, false, true, true, false, true, true, true, true, true, true];
+array[Reactions] of bool:  Sols8;
+constraint sum(j in Reactions)(Zs[j] * Sols8[j]) < 15;
 
-efm ['Growth', 'R2_rev', 'R3', 'R5b', 'R6', 'R8_rev', 'Rres', 'Td', 'Th', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 2.000000002055913e-06, 2.000000002055913e-06, 0.0, 0.0, 4.500000004625804e-06, 0.0, 3.500000003597848e-06, 0.0, 0.0, 1.000000001027957e-06, 0.0, 9.000000009251608e-06, 2.000000002055913e-06, 0.0, 0.0, 0.0, 1.000000001027957e-06, 0.0, 9.000000009251608e-06]
-[true, true, true, false, false, true, false, true, false, false, true, false, true, true, false, false, false, true, false, true]
+[1.428571435115244e-07, 4.285714305345731e-07, 2.857142870230488e-07, 0.0, 1.428571435115244e-07, 0.0, 1.000000004580671e-06, 0.0, 0.0, 1.142857148092195e-06, 0.0, 1.000000004580671e-06, 0.0, 4.285714305345731e-07, 0.0, 0.0, 3.428571444276584e-06, 0.0, 1.142857148092195e-06, 0.0]
+[false, false, false, false, false, false, true, false, false, true, false, true, false, false, false, false, true, false, true, false]
 
-Sols48 = [true, true, true, false, false, true, false, true, false, false, true, false, true, true, false, false, false, true, false, true];
-array[Reactions] of bool:  Sols48;
-constraint sum(j in Reactions)(Zs[j] * Sols48[j]) < 10;
+Sols9 = [false, false, false, false, false, false, true, false, false, true, false, true, false, false, false, false, true, false, true, false];
+array[Reactions] of bool:  Sols9;
+constraint sum(j in Reactions)(Zs[j] * Sols9[j]) < 5;
 
-efm ['Growth', 'R1', 'R2', 'R4', 'R5b', 'R8', 'Rres', 'Tc1', 'Tf', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.0, 18.0, 12.0, 0.0, 6.0, 30.0, 0.0, 24.0, 0.0, 0.0, 6.0, 0.0, 60.0, 18.0, 0.0, 0.0, 0.0, 0.0, 0.0, 60.0]
-[true, true, true, false, true, true, false, true, false, false, true, false, true, true, false, false, false, false, false, true]
+[9.999995323638557e-07, 3.199998503564338e-06, 2.199998971200483e-06, 0.0, 9.999995323638557e-07, 0.0, 0.0, 0.0, 1.199999438836627e-06, 0.0, 0.0, 0.0, 4.399997942400965e-06, 3.199998503564338e-06, 0.0, 3.599998316509881e-06, 0.0, 0.0, 9.999995323638557e-07, 4.399997942400965e-06]
+[true, true, true, false, true, false, false, false, true, false, false, false, true, true, false, true, false, false, true, true]
 
-Sols49 = [true, true, true, false, true, true, false, true, false, false, true, false, true, true, false, false, false, false, false, true];
-array[Reactions] of bool:  Sols49;
-constraint sum(j in Reactions)(Zs[j] * Sols49[j]) < 10;
+Sols10 = [true, true, true, false, true, false, false, false, true, false, false, false, true, true, false, true, false, false, true, true];
+array[Reactions] of bool:  Sols10;
+constraint sum(j in Reactions)(Zs[j] * Sols10[j]) < 10;
 
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5b', 'R8', 'Rres', 'Tc1', 'To2']
+efm ['Growth', 'R1', 'R2', 'R3', 'R6', 'Rres', 'Tc1', 'Td', 'Th', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 1.000000000000001e-06, 3e-06, 4e-06, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-05, 0.0, 1.000000000000001e-06, 0.0, 0.0, 0.0, 2.000000000000001e-06, 1.000000000000001e-05]
-[true, true, false, false, true, true, true, false, false, false, false, true, true, false, true, false, false, false, true, true]
+[1.000000000000001e-06, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-06, 1.000000000000002e-06, 0.0, 3.000000000000003e-06, 0.0, 0.0, 0.0, 2e-06, 8.000000000000004e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 3.000000000000001e-06, 8.000000000000004e-06]
+[true, false, false, true, true, true, false, true, false, false, false, true, true, false, false, false, false, false, true, true]
 
-Sols50 = [true, true, false, false, true, true, true, false, false, false, false, true, true, false, true, false, false, false, true, true];
-array[Reactions] of bool:  Sols50;
-constraint sum(j in Reactions)(Zs[j] * Sols50[j]) < 10;
+Sols11 = [true, false, false, true, true, true, false, true, false, false, false, true, true, false, false, false, false, false, true, true];
+array[Reactions] of bool:  Sols11;
+constraint sum(j in Reactions)(Zs[j] * Sols11[j]) < 9;
 
-efm ['Growth', 'R1', 'R3', 'R4', 'R5a', 'R8_rev', 'Rres', 'Tc2', 'Th', 'To2']
+efm ['Growth', 'R2_rev', 'R3', 'R4', 'R5b', 'R8_rev', 'Rres', 'Th', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 1.000000000000001e-06, 3.000000000000001e-06, 4.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-05, 1.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 2.000000000000001e-06, 1.000000000000001e-05]
-[true, true, false, false, true, true, true, false, false, false, false, true, true, true, false, false, false, false, true, true]
+[1.000000000000001e-06, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 4.000000000000006e-06, 0.0, 2.000000000000005e-06, 0.0, 4.000000000000006e-06, 5.999999999999997e-06, 0.0, 0.0, 0.0, 6.000000000000016e-06, 0.0, 5.000000000000007e-06, 5.999999999999997e-06]
+[true, false, false, true, true, false, false, true, false, true, false, true, true, false, false, false, true, false, true, true]
 
-Sols51 = [true, true, false, false, true, true, true, false, false, false, false, true, true, true, false, false, false, false, true, true];
-array[Reactions] of bool:  Sols51;
-constraint sum(j in Reactions)(Zs[j] * Sols51[j]) < 10;
+Sols12 = [true, false, false, true, true, false, false, true, false, true, false, true, true, false, false, false, true, false, true, true];
+array[Reactions] of bool:  Sols12;
+constraint sum(j in Reactions)(Zs[j] * Sols12[j]) < 10;
 
-efm ['Growth', 'R1', 'R3', 'R4', 'R5a', 'R8_rev', 'Rres', 'Tc1', 'Th', 'To2']
+efm ['Growth', 'R2_rev', 'R3', 'R5b', 'R7', 'R8_rev', 'Rres', 'Te', 'Th', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.153846153846155, 52.30769230769233, 46.15384615384617, 0.0, 6.153846153846155, 6.153846153846155, 0.0, 0.0, 13.84615384615385, 20.0, 6.153846153846155, 0.0, 0.0, 52.30769230769233, 0.0, 41.53846153846155, 60.0, 0.0, 0.0, 0.0]
-[true, true, true, false, true, true, false, false, true, true, true, false, false, true, false, true, true, false, false, false]
-
-Sols52 = [true, true, true, false, true, true, false, false, true, true, true, false, false, true, false, true, true, false, false, false];
-array[Reactions] of bool:  Sols52;
-constraint sum(j in Reactions)(Zs[j] * Sols52[j]) < 11;
-
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R6', 'R7', 'R8', 'Tc1', 'Td', 'Te']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[9.999999974752428e-07, 6.999999961010417e-06, 6.999999975221272e-06, 0.0, 0.0, 9.999999974752428e-07, 0.0, 0.0, 1.9999999985032e-06, 2.999999988873015e-06, 1.000000004580671e-06, 0.0, 0.0, 6.999999961010417e-06, 0.0, 5.999999995509598e-06, 8.999999966619044e-06, 9.999999974752428e-07, -7.105427357601001e-15, 0.0]
-[true, true, true, false, false, true, false, false, true, true, true, false, false, true, false, true, true, true, false, false]
-
-Sols53 = [true, true, true, false, false, true, false, false, true, true, true, false, false, true, false, true, true, true, false, false];
-array[Reactions] of bool:  Sols53;
-constraint sum(j in Reactions)(Zs[j] * Sols53[j]) < 11;
-
-efm ['Growth', 'R1', 'R2', 'R4', 'R6', 'R7', 'R8', 'Tc1', 'Td', 'Te', 'Tf']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 3.400000007047765e-06, 3.400000007047766e-06, 0.0, 0.0, 1.000000004580671e-06, 0.0, 0.0, 1.40000000143914e-06, 0.0, 1.000000004580671e-06, 0.0, 4.800000004934192e-06, 0.0, 3.400000007047765e-06, 4.200000004317419e-06, 0.0, 1.000000001027957e-06, -3.5527136788005e-15, 4.800000004934192e-06]
+[9.999995127275108e-07, 2.999998538182533e-06, 2.999998538182533e-06, 0.0, 0.0, 9.999995127275108e-07, 0.0, 0.0, 9.999995127275112e-07, 0.0, 9.999995127275108e-07, 0.0, 3.999998050910043e-06, 0.0, 2.999998538182533e-06, 2.999998538182534e-06, 0.0, 9.999995127275108e-07, 0.0, 3.999998050910043e-06]
 [true, true, true, false, false, true, false, false, true, false, true, false, true, false, true, true, false, true, false, true]
 
-Sols54 = [true, true, true, false, false, true, false, false, true, false, true, false, true, false, true, true, false, true, false, true];
-array[Reactions] of bool:  Sols54;
-constraint sum(j in Reactions)(Zs[j] * Sols54[j]) < 11;
+Sols13 = [true, true, true, false, false, true, false, false, true, false, true, false, true, false, true, true, false, true, false, true];
+array[Reactions] of bool:  Sols13;
+constraint sum(j in Reactions)(Zs[j] * Sols13[j]) < 11;
 
 efm ['Growth', 'R1', 'R2', 'R4', 'R6', 'R8', 'Rres', 'Tc2', 'Td', 'Tf', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[6.153846153846155, 52.30769230769233, 46.15384615384617, 0.0, 6.153846153846155, 6.153846153846155, 0.0, 0.0, 13.84615384615385, 20.0, 6.153846153846155, 0.0, 0.0, 0.0, 52.30769230769233, 41.53846153846155, 60.0, 0.0, 0.0, 0.0]
-[true, true, true, false, true, true, false, false, true, true, true, false, false, false, true, true, true, false, false, false]
+[1.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 1.500000000000001e-06, 2.500000000000001e-06, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 7.000000000000002e-06, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 2.000000000000001e-06, 7.000000000000002e-06]
+[true, false, false, false, false, true, true, false, false, false, false, true, true, false, false, false, false, true, true, true]
 
-Sols55 = [true, true, true, false, true, true, false, false, true, true, true, false, false, false, true, true, true, false, false, false];
-array[Reactions] of bool:  Sols55;
-constraint sum(j in Reactions)(Zs[j] * Sols55[j]) < 11;
+Sols14 = [true, false, false, false, false, true, true, false, false, false, false, true, true, false, false, false, false, true, true, true];
+array[Reactions] of bool:  Sols14;
+constraint sum(j in Reactions)(Zs[j] * Sols14[j]) < 8;
 
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R6', 'R7', 'R8', 'Tc2', 'Td', 'Te']
+efm ['Growth', 'R4', 'R5a', 'R8_rev', 'Rres', 'Tf', 'Th', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[9.999999974752428e-07, 6.999999961010417e-06, 6.999999975221272e-06, 0.0, 0.0, 9.999999974752428e-07, 0.0, 0.0, 1.9999999985032e-06, 2.999999988873015e-06, 1.000000004580671e-06, 0.0, 0.0, 0.0, 6.999999961010417e-06, 5.999999995509598e-06, 8.999999966619044e-06, 9.999999974752428e-07, -7.105427357601001e-15, 0.0]
-[true, true, true, false, false, true, false, false, true, true, true, false, false, false, true, true, true, true, false, false]
+[1.000000001027957e-06, 0.0, 0.0, 1.000000001027957e-06, 1.000000001027957e-06, 1.000000001027957e-06, 3.00000000308387e-06, 0.0, 0.0, 0.0, 0.0, 2.000000002055913e-06, 8.000000008223653e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 3.00000000308387e-06, 8.000000008223653e-06]
+[true, false, false, true, true, true, true, false, false, false, false, true, true, false, false, false, false, false, true, true]
 
-Sols56 = [true, true, true, false, false, true, false, false, true, true, true, false, false, false, true, true, true, true, false, false];
-array[Reactions] of bool:  Sols56;
-constraint sum(j in Reactions)(Zs[j] * Sols56[j]) < 11;
+Sols15 = [true, false, false, true, true, true, true, false, false, false, false, true, true, false, false, false, false, false, true, true];
+array[Reactions] of bool:  Sols15;
+constraint sum(j in Reactions)(Zs[j] * Sols15[j]) < 9;
 
-efm ['Growth', 'R1', 'R2', 'R4', 'R6', 'R7', 'R8', 'Tc2', 'Td', 'Te', 'Tf']
+efm ['Growth', 'R2_rev', 'R3', 'R4', 'R5a', 'R8_rev', 'Rres', 'Th', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[8.076923076923077, 8.076923076923077, 0.0, 0.0, 8.076923076923077, 0.0, 15.0, 0.0, 6.923076923076925, 0.0, 0.0, 15.0, 60.0, 0.0, 8.076923076923077, 20.76923076923078, 0.0, 0.0, 23.07692307692308, 60.0]
-[true, true, false, false, true, false, true, false, true, false, false, true, true, false, true, true, false, false, true, true]
-
-Sols57 = [true, true, false, false, true, false, true, false, true, false, false, true, true, false, true, true, false, false, true, true];
-array[Reactions] of bool:  Sols57;
-constraint sum(j in Reactions)(Zs[j] * Sols57[j]) < 11;
-
-efm ['Growth', 'R1', 'R3', 'R5a', 'R6', 'R8_rev', 'Rres', 'Tc2', 'Td', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[3.333333333333336, 3.333333333333336, 0.0, 0.0, 3.333333333333336, 0.0, 23.33333333333334, 0.0, 0.0, 20.0, 0.0, 23.33333333333334, 13.33333333333335, 0.0, 3.333333333333336, 0.0, 60.0, 0.0, 26.66666666666668, 13.33333333333335]
-[true, true, false, false, true, false, true, false, false, true, false, true, true, false, true, false, true, false, true, true]
-
-Sols58 = [true, true, false, false, true, false, true, false, false, true, false, true, true, false, true, false, true, false, true, true];
-array[Reactions] of bool:  Sols58;
-constraint sum(j in Reactions)(Zs[j] * Sols58[j]) < 11;
-
-efm ['Growth', 'R1', 'R3', 'R5a', 'R7', 'R8_rev', 'Rres', 'Tc2', 'Te', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[3.333333333333336, 3.333333333333336, 0.0, 0.0, 3.333333333333336, 0.0, 23.33333333333334, 0.0, 0.0, 20.0, 0.0, 23.33333333333334, 13.33333333333335, 3.333333333333336, 0.0, 0.0, 60.0, 0.0, 26.66666666666668, 13.33333333333335]
-[true, true, false, false, true, false, true, false, false, true, false, true, true, true, false, false, true, false, true, true]
-
-Sols59 = [true, true, false, false, true, false, true, false, false, true, false, true, true, true, false, false, true, false, true, true];
-array[Reactions] of bool:  Sols59;
-constraint sum(j in Reactions)(Zs[j] * Sols59[j]) < 11;
-
-efm ['Growth', 'R1', 'R3', 'R5a', 'R7', 'R8_rev', 'Rres', 'Tc1', 'Te', 'Th', 'To2']
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[12.5, 42.5, 42.5, 0.0, 0.0, 12.5, 0.0, 0.0, 17.50000000000001, 0.0, 12.5, 0.0, 60.0, 42.5, 0.0, 52.50000000000002, 0.0, 12.5, 0.0, 60.0]
+[9.999995127275108e-07, 2.999998538182533e-06, 2.999998538182533e-06, 0.0, 0.0, 9.999995127275108e-07, 0.0, 0.0, 9.999995127275112e-07, 0.0, 9.999995127275108e-07, 0.0, 3.999998050910043e-06, 2.999998538182533e-06, 0.0, 2.999998538182534e-06, 0.0, 9.999995127275108e-07, 0.0, 3.999998050910043e-06]
 [true, true, true, false, false, true, false, false, true, false, true, false, true, true, false, true, false, true, false, true]
 
-Sols60 = [true, true, true, false, false, true, false, false, true, false, true, false, true, true, false, true, false, true, false, true];
-array[Reactions] of bool:  Sols60;
-constraint sum(j in Reactions)(Zs[j] * Sols60[j]) < 11;
+Sols16 = [true, true, true, false, false, true, false, false, true, false, true, false, true, true, false, true, false, true, false, true];
+array[Reactions] of bool:  Sols16;
+constraint sum(j in Reactions)(Zs[j] * Sols16[j]) < 11;
 
 efm ['Growth', 'R1', 'R2', 'R4', 'R6', 'R8', 'Rres', 'Tc1', 'Td', 'Tf', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1.000000001027957e-06, 4.600000008281313e-06, 3.600000007253357e-06, 0.0, 1.000000001027957e-06, 1.000000004580671e-06, 0.0, 0.0, 1.600000001644731e-06, 0.0, 1.000000004580671e-06, 0.0, 5.200000005345374e-06, 4.600000008281313e-06, 0.0, 4.800000004934192e-06, 0.0, 0.0, -3.5527136788005e-15, 5.200000005345374e-06]
-[true, true, true, false, true, true, false, false, true, false, true, false, true, true, false, true, false, false, false, true]
+[1.000000000000001e-06, 6.500000000000001e-06, 5.500000000000002e-06, 0.0, 1.000000000000001e-06, 0.0, 0.0, 0.0, 1.750000000000001e-06, 2.750000000000001e-06, 0.0, 0.0, 0.0, 0.0, 6.500000000000001e-06, 5.250000000000003e-06, 8.250000000000003e-06, 0.0, 1.000000000000001e-06, 0.0]
+[true, true, true, false, true, false, false, false, true, true, false, false, false, false, true, true, true, false, true, false]
 
-Sols61 = [true, true, true, false, true, true, false, false, true, false, true, false, true, true, false, true, false, false, false, true];
-array[Reactions] of bool:  Sols61;
-constraint sum(j in Reactions)(Zs[j] * Sols61[j]) < 11;
+Sols17 = [true, true, true, false, true, false, false, false, true, true, false, false, false, false, true, true, true, false, true, false];
+array[Reactions] of bool:  Sols17;
+constraint sum(j in Reactions)(Zs[j] * Sols17[j]) < 10;
 
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R6', 'R8', 'Rres', 'Tc1', 'Td', 'To2']
+efm ['Growth', 'R1', 'R2', 'R3', 'R6', 'R7', 'Tc2', 'Td', 'Te', 'Th']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[11.53846153846155, 53.07692307692309, 41.53846153846155, 0.0, 11.53846153846155, 11.53846153846155, 0.0, 0.0, 18.46153846153847, 0.0, 11.53846153846155, 0.0, 60.0, 0.0, 53.07692307692309, 55.3846153846154, 0.0, 0.0, 0.0, 60.0]
-[true, true, true, false, true, true, false, false, true, false, true, false, true, false, true, true, false, false, false, true]
+[1.000000001027957e-06, 3.00000000308387e-06, 2.000000002055913e-06, 0.0, 1.000000001027957e-06, 4.000000004111826e-06, 0.0, 3.00000000308387e-06, 0.0, 0.0, 1.000000001027957e-06, 0.0, 8.000000008223652e-06, 3.00000000308387e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 8.000000008223652e-06]
+[true, true, true, false, true, true, false, true, false, false, true, false, true, true, false, false, false, false, false, true]
 
-Sols62 = [true, true, true, false, true, true, false, false, true, false, true, false, true, false, true, true, false, false, false, true];
-array[Reactions] of bool:  Sols62;
-constraint sum(j in Reactions)(Zs[j] * Sols62[j]) < 11;
+Sols18 = [true, true, true, false, true, true, false, true, false, false, true, false, true, true, false, false, false, false, false, true];
+array[Reactions] of bool:  Sols18;
+constraint sum(j in Reactions)(Zs[j] * Sols18[j]) < 10;
 
-efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R6', 'R8', 'Rres', 'Tc2', 'Td', 'To2']
+efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5b', 'R8', 'Rres', 'Tc1', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[8.076923076923079, 8.076923076923079, 0.0, 0.0, 8.076923076923079, 0.0, 0.0, 15.0, 6.923076923076924, 0.0, 0.0, 15.0, 60.0, 8.076923076923079, 0.0, 20.76923076923078, 0.0, 0.0, 23.07692307692309, 60.0]
-[true, true, false, false, true, false, false, true, true, false, false, true, true, true, false, true, false, false, true, true]
+[1.000000001027957e-06, 2.000000002055913e-06, 2.000000002055913e-06, 0.0, 0.0, 3.500000003597848e-06, 0.0, 2.500000002569891e-06, 0.0, 0.0, 1.000000001027957e-06, 0.0, 7.000000007195695e-06, 2.000000002055913e-06, 0.0, 0.0, 0.0, 1.000000001027957e-06, 0.0, 7.000000007195695e-06]
+[true, true, true, false, false, true, false, true, false, false, true, false, true, true, false, false, false, true, false, true]
 
-Sols63 = [true, true, false, false, true, false, false, true, true, false, false, true, true, true, false, true, false, false, true, true];
-array[Reactions] of bool:  Sols63;
-constraint sum(j in Reactions)(Zs[j] * Sols63[j]) < 11;
+Sols19 = [true, true, true, false, false, true, false, true, false, false, true, false, true, true, false, false, false, true, false, true];
+array[Reactions] of bool:  Sols19;
+constraint sum(j in Reactions)(Zs[j] * Sols19[j]) < 10;
 
-efm ['Growth', 'R1', 'R3', 'R5b', 'R6', 'R8_rev', 'Rres', 'Tc1', 'Td', 'Th', 'To2']
+efm ['Growth', 'R1', 'R2', 'R4', 'R5b', 'R8', 'Rres', 'Tc1', 'Tf', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[8.076923076923079, 8.076923076923079, 0.0, 0.0, 8.076923076923079, 0.0, 0.0, 15.0, 6.923076923076924, 0.0, 0.0, 15.0, 60.0, 0.0, 8.076923076923079, 20.76923076923078, 0.0, 0.0, 23.07692307692309, 60.0]
-[true, true, false, false, true, false, false, true, true, false, false, true, true, false, true, true, false, false, true, true]
+[1.000000001027957e-06, 2.000000002055913e-06, 2.000000002055913e-06, 0.0, 0.0, 3.500000003597848e-06, 2.500000002569891e-06, 0.0, 0.0, 0.0, 1.000000001027957e-06, 0.0, 7.000000007195695e-06, 0.0, 2.000000002055913e-06, 0.0, 0.0, 1.000000001027957e-06, 0.0, 7.000000007195695e-06]
+[true, true, true, false, false, true, true, false, false, false, true, false, true, false, true, false, false, true, false, true]
 
-Sols64 = [true, true, false, false, true, false, false, true, true, false, false, true, true, false, true, true, false, false, true, true];
-array[Reactions] of bool:  Sols64;
-constraint sum(j in Reactions)(Zs[j] * Sols64[j]) < 11;
+Sols20 = [true, true, true, false, false, true, true, false, false, false, true, false, true, false, true, false, false, true, false, true];
+array[Reactions] of bool:  Sols20;
+constraint sum(j in Reactions)(Zs[j] * Sols20[j]) < 10;
 
-efm ['Growth', 'R1', 'R3', 'R5b', 'R6', 'R8_rev', 'Rres', 'Tc2', 'Td', 'Th', 'To2']
+efm ['Growth', 'R1', 'R2', 'R4', 'R5a', 'R8', 'Rres', 'Tc2', 'Tf', 'To2']
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[8.076923076923079, 8.076923076923079, 0.0, 0.0, 8.076923076923079, 0.0, 15.0, 0.0, 6.923076923076924, 0.0, 0.0, 15.0, 60.0, 8.076923076923079, 0.0, 20.76923076923078, 0.0, 0.0, 23.07692307692309, 60.0]
-[true, true, false, false, true, false, true, false, true, false, false, true, true, true, false, true, false, false, true, true]
+[1.000000000000001e-06, 5.000000000000002e-06, 4.000000000000002e-06, 0.0, 1.000000000000001e-06, 2.000000000000001e-06, 1.000000000000001e-06, 0.0, 1.000000000000002e-06, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 4.000000000000003e-06, 4.000000000000002e-06, 1.000000000000001e-06, 3.000000000000004e-06, 3.000000000000001e-06, 0.0, 0.0, 4.000000000000003e-06]
+[true, true, true, false, true, true, true, false, true, true, true, false, true, true, true, true, true, false, false, true]
 
-Sols65 = [true, true, false, false, true, false, true, false, true, false, false, true, true, true, false, true, false, false, true, true];
-array[Reactions] of bool:  Sols65;
-constraint sum(j in Reactions)(Zs[j] * Sols65[j]) < 11;
+Sols21 = [true, true, true, false, true, true, true, false, true, true, true, false, true, true, true, true, true, false, false, true];
+array[Reactions] of bool:  Sols21;
+constraint sum(j in Reactions)(Zs[j] * Sols21[j]) < 15;
 
-efm ['Growth', 'R1', 'R3', 'R5a', 'R6', 'R8_rev', 'Rres', 'Tc1', 'Td', 'Th', 'To2']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[1.000000001027957e-06, 3.00000000308387e-06, 2.000000002055913e-06, 0.0, 1.000000001027957e-06, 4.000000004111826e-06, 0.0, 3.00000000308387e-06, 0.0, 0.0, 1.000000001027957e-06, 0.0, 8.000000008223652e-06, 0.0, 3.00000000308387e-06, 0.0, 0.0, 0.0, 0.0, 8.000000008223652e-06]
+[true, true, true, false, true, true, false, true, false, false, true, false, true, false, true, false, false, false, false, true]
+
+Sols22 = [true, true, true, false, true, true, false, true, false, false, true, false, true, false, true, false, false, false, false, true];
+array[Reactions] of bool:  Sols22;
+constraint sum(j in Reactions)(Zs[j] * Sols22[j]) < 10;
+
+efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5b', 'R8', 'Rres', 'Tc2', 'To2']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[1.000000001027957e-06, 3.00000000308387e-06, 2.000000002055913e-06, 0.0, 1.000000001027957e-06, 4.000000004111826e-06, 3.00000000308387e-06, 0.0, 0.0, 0.0, 1.000000001027957e-06, 0.0, 8.000000008223652e-06, 3.00000000308387e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 8.000000008223652e-06]
+[true, true, true, false, true, true, true, false, false, false, true, false, true, true, false, false, false, false, false, true]
+
+Sols23 = [true, true, true, false, true, true, true, false, false, false, true, false, true, true, false, false, false, false, false, true];
+array[Reactions] of bool:  Sols23;
+constraint sum(j in Reactions)(Zs[j] * Sols23[j]) < 10;
+
+efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5a', 'R8', 'Rres', 'Tc1', 'To2']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[1.000000001027957e-06, 3.00000000308387e-06, 2.000000002055913e-06, 0.0, 1.000000001027957e-06, 4.000000004111826e-06, 3.00000000308387e-06, 0.0, 0.0, 0.0, 1.000000001027957e-06, 0.0, 8.000000008223652e-06, 0.0, 3.00000000308387e-06, 0.0, 0.0, 0.0, 0.0, 8.000000008223652e-06]
+[true, true, true, false, true, true, true, false, false, false, true, false, true, false, true, false, false, false, false, true]
+
+Sols24 = [true, true, true, false, true, true, true, false, false, false, true, false, true, false, true, false, false, false, false, true];
+array[Reactions] of bool:  Sols24;
+constraint sum(j in Reactions)(Zs[j] * Sols24[j]) < 10;
+
+efm ['Growth', 'R1', 'R2', 'R3', 'R4', 'R5a', 'R8', 'Rres', 'Tc2', 'To2']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.500000003597847e-06, 0.0, 0.0, 3.500000003597847e-06, 3.500000003597847e-06, 0.0, 8.000000008223652e-06, 0.0, 1.000000001027957e-06, 0.0, 0.0, 8.000000008223652e-06, 2.500000002569891e-05, 0.0, 0.0, 3.00000000308387e-06, 0.0, 0.0, 1.15000000118215e-05, 2.500000002569891e-05]
+[true, false, false, true, true, false, true, false, true, false, false, true, true, false, false, true, false, false, true, true]
+
+Sols25 = [true, false, false, true, true, false, true, false, true, false, false, true, true, false, false, true, false, false, true, true];
+array[Reactions] of bool:  Sols25;
+constraint sum(j in Reactions)(Zs[j] * Sols25[j]) < 10;
+
+efm ['Growth', 'R2_rev', 'R3', 'R5a', 'R6', 'R8_rev', 'Rres', 'Td', 'Th', 'To2']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[1.000000000000001e-06, 5.000000000000001e-06, 5.000000000000002e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 1.500000000000001e-06, 2.500000000000001e-06, 0.0, 0.0, 0.0, 0.0, 5.000000000000001e-06, 4.500000000000002e-06, 7.500000000000002e-06, 1.000000000000001e-06, 1.000000000000001e-06, 0.0]
+[true, true, true, false, false, false, false, false, true, true, false, false, false, false, true, true, true, true, true, false]
+
+Sols26 = [true, true, true, false, false, false, false, false, true, true, false, false, false, false, true, true, true, true, true, false];
+array[Reactions] of bool:  Sols26;
+constraint sum(j in Reactions)(Zs[j] * Sols26[j]) < 10;
+
+efm ['Growth', 'R1', 'R2', 'R6', 'R7', 'Tc2', 'Td', 'Te', 'Tf', 'Th']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[0.6070640181066557, 1.821192054319967, 1.214128036213311, 0.0, 0.6070640181066557, 0.0, 0.0, 4.249448126746591, 0.0, 4.856512144853246, 0.0, 4.249448126746591, 0.0, 0.0, 1.821192054319967, 0.0, 14.56953643455974, 0.0, 4.856512144853247, 0.0]
+[true, true, true, false, true, false, false, true, false, true, false, true, false, false, true, false, true, false, true, false]
+
+Sols27 = [true, true, true, false, true, false, false, true, false, true, false, true, false, false, true, false, true, false, true, false];
+array[Reactions] of bool:  Sols27;
+constraint sum(j in Reactions)(Zs[j] * Sols27[j]) < 10;
+
+efm ['Growth', 'R1', 'R2', 'R3', 'R5b', 'R7', 'R8_rev', 'Tc2', 'Te', 'Th']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[2.666666669407885e-06, 0.0, 0.0, 1.000000001027957e-06, 1.000000001027957e-06, 0.0, 0.0, 4.666666671463798e-06, 1.000000001027957e-06, 0.0, 0.0, 4.666666671463799e-06, 1.666666668379928e-05, 0.0, 0.0, 3.00000000308387e-06, 0.0, 1.666666668379929e-06, 7.333333340871684e-06, 1.666666668379928e-05]
+[true, false, false, true, true, false, false, true, true, false, false, true, true, false, false, true, false, true, true, true]
+
+Sols28 = [true, false, false, true, true, false, false, true, true, false, false, true, true, false, false, true, false, true, true, true];
+array[Reactions] of bool:  Sols28;
+constraint sum(j in Reactions)(Zs[j] * Sols28[j]) < 11;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[1.000000000000001e-06, 2.000000000000001e-06, 2.000000000000001e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 0.0, 0.0, 4.000000000000002e-06, 0.0, 2.000000000000001e-06, 3.000000000000002e-06, 0.0, 1.000000000000001e-06, 1.000000000000001e-06, 4.000000000000002e-06]
+[true, true, true, false, false, false, false, false, true, false, false, false, true, false, true, true, false, true, true, true]
+
+Sols29 = [true, true, true, false, false, false, false, false, true, false, false, false, true, false, true, true, false, true, true, true];
+array[Reactions] of bool:  Sols29;
+constraint sum(j in Reactions)(Zs[j] * Sols29[j]) < 10;
+
+efm ['Growth', 'R1', 'R2', 'R6', 'Rres', 'Tc2', 'Td', 'Tf', 'Th', 'To2']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[1.000000000000001e-06, 3.200000000000001e-06, 2.200000000000001e-06, 0.0, 1.000000000000001e-06, 0.0, 0.0, 0.0, 1.200000000000001e-06, 0.0, 0.0, 0.0, 4.400000000000002e-06, 0.0, 3.200000000000001e-06, 3.600000000000003e-06, 0.0, 0.0, 1.000000000000001e-06, 4.400000000000002e-06]
+[true, true, true, false, true, false, false, false, true, false, false, false, true, false, true, true, false, false, true, true]
+
+Sols30 = [true, true, true, false, true, false, false, false, true, false, false, false, true, false, true, true, false, false, true, true];
+array[Reactions] of bool:  Sols30;
+constraint sum(j in Reactions)(Zs[j] * Sols30[j]) < 10;
+
+efm ['Growth', 'R1', 'R2', 'R3', 'R6', 'Rres', 'Tc2', 'Td', 'Th', 'To2']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[2.333333333333335e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-06, 0.0, 1.000000000000001e-06, 0.0, 0.0, 3.333333333333335e-06, 1.333333333333334e-05, 0.0, 0.0, 3.000000000000001e-06, 0.0, 2.333333333333335e-06, 5.666666666666669e-06, 1.333333333333334e-05]
+[true, false, false, false, false, false, true, false, true, false, false, true, true, false, false, true, false, true, true, true]
+
+Sols31 = [true, false, false, false, false, false, true, false, true, false, false, true, true, false, false, true, false, true, true, true];
+array[Reactions] of bool:  Sols31;
+constraint sum(j in Reactions)(Zs[j] * Sols31[j]) < 9;
+
+efm ['Growth', 'R5a', 'R6', 'R8_rev', 'Rres', 'Td', 'Tf', 'Th', 'To2']
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[2.083333333333333, 6.249999999999993, 4.166666666666659, 0.0, 2.083333333333333, 0.0, 0.0, 14.58333333333334, 0.0, 16.66666666666667, 0.0, 14.58333333333334, 0.0, 6.249999999999993, 0.0, 0.0, 50.00000000000001, 0.0, 16.66666666666667, 0.0]
+[true, true, true, false, true, false, false, true, false, true, false, true, false, true, false, false, true, false, true, false]
+
+Sols32 = [true, true, true, false, true, false, false, true, false, true, false, true, false, true, false, false, true, false, true, false];
+array[Reactions] of bool:  Sols32;
+constraint sum(j in Reactions)(Zs[j] * Sols32[j]) < 10;
+
+efm ['Growth', 'R1', 'R2', 'R3', 'R5b', 'R7', 'R8_rev', 'Tc1', 'Te', 'Th']
+{'type': 'error', 'what': 'error', 'message': '  MIPGurobiWrapper runtime error:  HostID mismatch (licensed to 71e0f077, hostid is 2842e7d0)\nMessage from caller: Could not open GUROBI environment.'}
+MiniZincError('  MIPGurobiWrapper runtime error:  HostID mismatch (licensed to 71e0f077, hostid is 2842e7d0)\nMessage from caller: Could not open GUROBI environment.')

@@ -4,14 +4,22 @@ from contextlib import redirect_stdout
 
 from efm_checker import EFMChecker
 
-import shutil, os, io, pprint, warnings, time, numpy as np
+import shutil, argparse, os, io, pprint, warnings, time, numpy as np
 
-minizinc_solvers = ["chuffed", "coin-bc", "cplex", "gecode", "gist", "gurobi", "highs", "sat", "scip"]
+minizinc_solvers = ["chuffed", "coin-bc", "cplex", "gecode", "gist", "highs", "gurobi", "sat", "scip"]
 
-outname = 'result_file.txt'
+parser = argparse.ArgumentParser(prog='benchmark', description='Launch MiniZinc EFMs benchmark')
+parser.add_argument('data') 
+parser.add_argument('check') 
+parser.add_argument('outname') 
+parser.add_argument('--minimize', action='store_true')
+args = parser.parse_args()
+
+outname = args.outname # 'result_file.txt'
 fname = 'efm.mzn'
-inname = 'covert_palsson_int.dzn' #'efm_instance.dzn'
-efmcheckfile = 'covert_palsson_int.efmc' # for EFMChecker
+inname = args.data # 'covert_palsson_edit.dzn' #'efm_instance.dzn'
+efmcheckfile = args.check # 'covert_palsson_edit.efmc' # for EFMChecker
+minimize_flag = args.minimize
 
 solver_params = {minizinc_solver: "" for minizinc_solver in minizinc_solvers} 
 
@@ -30,8 +38,8 @@ def no_flattening_error(fcontent):
     words_lines_to_remove = '% flattening error'  
     return '\n'.join(list(filter(lambda x: words_lines_to_remove not in x, fcontent.split('\n'))))
     
-def minimize_error(fcontent, minimize_error):
-    words_lines_to_remove = '%%% if minimize error' if minimize_error else '%%% if not minimize error'  
+def minimize(fcontent, minimize_flag):
+    words_lines_to_remove = '%%% if minimize' if not minimize_flag else '%%% if not minimize'  
     return '\n'.join(list(filter(lambda x: words_lines_to_remove not in x, fcontent.split('\n'))))
     
 def get_program(fcontent, mode):
@@ -47,7 +55,10 @@ def to_mz_list(ls):
 def support(ls):
     return np.nonzero(ls)[0]
   
-os.makedirs("outputs/", exist_ok=True)
+#os.makedirs("outputs/", exist_ok=True)
+os.makedirs(f"d_{outname}/", exist_ok=True)
+
+unbounded_vars = ["--allow-unbounded-vars"]
 
 ind_constr = ["-D", "fIndConstr=true", "-D", "fMIPdomains=false", "--allow-unbounded-vars"]
 
@@ -57,7 +68,7 @@ xpress_params = None #["--xpress-dll", "/opt/xpressmp/lib/libxprl.so", "--xpress
 
 highs_params = ["--highs-dll", "/home/maxime/Téléchargements/HiGHS/build/lib/libhighs.so"]
 
-mips = ['gurobi', 'scip', 'cplex']
+mips = ['scip', 'cplex'] # "gurobi"
 
 unimplemented = [x + '_float' for x in minizinc_solvers if x not in mips] 
 
@@ -69,8 +80,8 @@ params = {'chuffed_int': None,
  'coin-bc_int': None,
  'cplex_float': cplex_params + ind_constr,
  'cplex_int': cplex_params,
- 'gecode_int': None,
- 'gist_int': None,
+ 'gecode_int': unbounded_vars,
+ 'gist_int': unbounded_vars,
  'gurobi_float': ind_constr,
  'gurobi_int': None,
  'highs_int': highs_params,
@@ -80,6 +91,7 @@ params = {'chuffed_int': None,
 
 NO_FLOAT_SUPPORT = 'no_float_support'
 FLATTENING_ERROR = 'flattening_error'
+NO_FLATTENING_ERROR = 'no_flattening_error'
 MINIMIZE_ERROR = 'minimize_error'
 NUMBER_OUT_OF_LIMITS = 'flattening_error'
 NO_INDICATOR_CONSTRAINTS_SUPPORT = 'flattening_error'
@@ -93,20 +105,19 @@ flags = {'chuffed_int': NO_FLOAT_SUPPORT,
  'gist_int': FLATTENING_ERROR, # can run without flattening but bugs
  'gurobi_float': FLATTENING_ERROR,
  'gurobi_int': FLATTENING_ERROR,
- 'highs_int': MINIMIZE_ERROR,
+ 'highs_int': FLATTENING_ERROR, #MINIMIZE_ERROR,
  'sat_int': NO_FLOAT_SUPPORT,
  'scip_float': FLATTENING_ERROR,
  'scip_int': FLATTENING_ERROR}
  
  
 def solver_get_program(fcontent, config, flag):
+    fcontent = minimize(fcontent, minimize_flag)
     if flag == NO_FLOAT_SUPPORT:
         return get_program_no_floats(fcontent, config)
-    else:
-        return get_program(fcontent, config)
-        if flag == FLATTENING_ERROR:
-            return program
-        return no_flattening_error(program)
+    elif flag == NO_FLATTENING_ERROR:
+        return no_flattening_error(get_program(fcontent, config))
+    return get_program(fcontent, config)
         
 def solver_get_instance(fcontent, config, flag):
     if flag == NO_FLOAT_SUPPORT:
@@ -121,6 +132,7 @@ efm_checker = EFMChecker(efmcheckfile)
 benchmark = {}
 for config in ['int', 'float']:
     for solver_name in minizinc_solvers:
+        efm_checker.time = 0
         solve_time = 0
         solveig = solver_name + '_' + config
         if solveig in unimplemented:
@@ -170,7 +182,7 @@ for config in ['int', 'float']:
                     prev_sols.append(new_sol)
                 # End Solving
                 res_time = round(solve_time, 3)
-                benchmark[solveig] = {'time': res_time, 'nb': nb_sol}
+                benchmark[solveig] = {'time': res_time, 'nb': nb_sol, 'echeck': efm_checker.time}
             except Exception as e:
                 #raise e
                 pprint.pprint(e)

@@ -93,7 +93,7 @@ class EFMChecker():
             config = pickle.load(f)
 
         self.matrix = config.matrix
-        self.rindex = {k[2:]: v for k, v in config.rindex.items()} # config.rindex
+        self.rindex = config.rindex
         self.time = 0
 
     def is_efm(self, support):

@@ -1,0 +1,11 @@
+{'chuffed_int': {'echeck': 0.01771712303161621, 'nb': 80, 'time': 115.335},
+ 'coin-bc_int': {'echeck': 0.01715087890625, 'nb': 80, 'time': 81.966},
+ 'cplex_float': {'echeck': 0.0005388259887695312, 'nb': 3, 'time': 1.082},
+ 'cplex_int': {'echeck': 0.017270803451538086, 'nb': 80, 'time': 28.658},
+ 'gecode_int': {'echeck': 0.016891002655029297, 'nb': 80, 'time': 128.454},
+ 'gist_int': {'echeck': 0.016986846923828125, 'nb': 80, 'time': 129.172},
+ 'gurobi_int': {},
+ 'highs_int': {},
+ 'sat_int': {'echeck': 0.016931772232055664, 'nb': 80, 'time': 24.307},
+ 'scip_float': {'echeck': 0.016907691955566406, 'nb': 80, 'time': 38.825},
+ 'scip_int': {'echeck': 0.017682313919067383, 'nb': 80, 'time': 48.389}}

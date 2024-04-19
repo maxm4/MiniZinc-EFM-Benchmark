@@ -1,24 +1,160 @@
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-[true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+[true, true, false, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true]
 
-Sols1 = [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+Sols1 = [true, true, false, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true];
 array[Reactions] of bool:  Sols1;
-constraint sum(j in Reactions)(Zs[j] * Sols1[j]) < 1;
+constraint sum(j in Reactions)(Zs[j] * Sols1[j]) < 18;
 
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-[false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+[false, false, true, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false]
 
-Sols2 = [false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+Sols2 = [false, false, true, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false];
 array[Reactions] of bool:  Sols2;
-constraint sum(j in Reactions)(Zs[j] * Sols2[j]) < 1;
+constraint sum(j in Reactions)(Zs[j] * Sols2[j]) < 2;
 
 ["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-[false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false]
+[true, false, false, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true]
 
-Sols3 = [false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false];
+Sols3 = [true, false, false, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true];
 array[Reactions] of bool:  Sols3;
-constraint sum(j in Reactions)(Zs[j] * Sols3[j]) < 1;
+constraint sum(j in Reactions)(Zs[j] * Sols3[j]) < 17;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+Sols4 = [false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+array[Reactions] of bool:  Sols4;
+constraint sum(j in Reactions)(Zs[j] * Sols4[j]) < 1;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[true, false, false, true, true, true, true, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols5 = [true, false, false, true, true, true, true, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols5;
+constraint sum(j in Reactions)(Zs[j] * Sols5[j]) < 15;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false]
+
+Sols6 = [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false];
+array[Reactions] of bool:  Sols6;
+constraint sum(j in Reactions)(Zs[j] * Sols6[j]) < 1;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.333333333333335e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 1.333333333333334e-06, 0.0, 0.0, 0.0, 0.0, 0.0, 2.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-07, 3.333333333333335e-07, 2.666666666666668e-06]
+[false, false, false, false, false, true, true, false, false, false, false, false, true, false, false, false, false, false, false, true]
+
+Sols7 = [false, false, false, false, false, true, true, false, false, false, false, false, true, false, false, false, false, false, false, true];
+array[Reactions] of bool:  Sols7;
+constraint sum(j in Reactions)(Zs[j] * Sols7[j]) < 4;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[5.000000000000001e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.000000000000001e-06, 0.0, -5e-07, 0.0, 0.0, 4.000000000000001e-06, 0.0, 0.0, 0.0, -1.5e-06, 5.000000000000001e-07, 5.000000000000001e-07, 4.000000000000001e-06]
+[true, false, false, true, true, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols8 = [true, false, false, true, true, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols8;
+constraint sum(j in Reactions)(Zs[j] * Sols8[j]) < 14;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.333333333333335e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.333333333333334e-06, 0.0, 0.0, 0.0, 0.0, 2.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-07, 3.333333333333335e-07, 2.666666666666668e-06]
+[false, false, false, true, true, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols9 = [false, false, false, true, true, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols9;
+constraint sum(j in Reactions)(Zs[j] * Sols9[j]) < 13;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.333333333333335e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.333333333333334e-06, 0.0, 0.0, 0.0, 0.0, 2.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-07, 3.333333333333335e-07, 2.666666666666668e-06]
+[true, false, false, false, true, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols10 = [true, false, false, false, true, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols10;
+constraint sum(j in Reactions)(Zs[j] * Sols10[j]) < 13;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[6.666666666666668e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.666666666666667e-06, 0.0, 0.0, -6.666666666666667e-07, 0.0, 4.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 6.666666666666668e-07, 1.333333333333334e-06, 4.666666666666668e-06]
+[false, false, false, false, true, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols11 = [false, false, false, false, true, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols11;
+constraint sum(j in Reactions)(Zs[j] * Sols11[j]) < 12;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.333333333333335e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.333333333333334e-06, 0.0, 0.0, 0.0, 0.0, 2.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-07, 3.333333333333335e-07, 2.666666666666668e-06]
+[true, false, false, true, false, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols12 = [true, false, false, true, false, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols12;
+constraint sum(j in Reactions)(Zs[j] * Sols12[j]) < 13;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[6.666666666666668e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.666666666666667e-06, 0.0, 0.0, -6.666666666666667e-07, 0.0, 4.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 6.666666666666668e-07, 1.333333333333334e-06, 4.666666666666668e-06]
+[false, false, false, true, false, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols13 = [false, false, false, true, false, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols13;
+constraint sum(j in Reactions)(Zs[j] * Sols13[j]) < 12;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[6.666666666666668e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.666666666666667e-06, 0.0, 0.0, -6.666666666666667e-07, 0.0, 4.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 6.666666666666668e-07, 1.333333333333334e-06, 4.666666666666668e-06]
+[true, false, false, false, false, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols14 = [true, false, false, false, false, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols14;
+constraint sum(j in Reactions)(Zs[j] * Sols14[j]) < 12;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[6.666666666666668e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.666666666666667e-06, 0.0, 0.0, -6.666666666666667e-07, 0.0, 4.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 6.666666666666668e-07, 1.333333333333334e-06, 4.666666666666668e-06]
+[false, false, false, false, false, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true]
+
+Sols15 = [false, false, false, false, false, true, false, true, true, true, true, false, true, false, false, true, true, true, true, true];
+array[Reactions] of bool:  Sols15;
+constraint sum(j in Reactions)(Zs[j] * Sols15[j]) < 11;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.333333333333335e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.333333333333334e-06, 0.0, 0.0, 0.0, 0.0, 2.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-07, 3.333333333333335e-07, 2.666666666666668e-06]
+[true, false, false, true, true, true, false, true, false, false, false, false, true, false, false, false, false, false, false, true]
+
+Sols16 = [true, false, false, true, true, true, false, true, false, false, false, false, true, false, false, false, false, false, false, true];
+array[Reactions] of bool:  Sols16;
+constraint sum(j in Reactions)(Zs[j] * Sols16[j]) < 7;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.333333333333335e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.333333333333334e-06, 0.0, 0.0, 0.0, 0.0, 2.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-07, 3.333333333333335e-07, 2.666666666666668e-06]
+[true, false, false, false, true, true, false, true, true, true, true, false, true, false, false, true, true, true, false, true]
+
+Sols17 = [true, false, false, false, true, true, false, true, true, true, true, false, true, false, false, true, true, true, false, true];
+array[Reactions] of bool:  Sols17;
+constraint sum(j in Reactions)(Zs[j] * Sols17[j]) < 12;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.333333333333335e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.333333333333334e-06, 0.0, 0.0, 0.0, 0.0, 2.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-07, 3.333333333333335e-07, 2.666666666666668e-06]
+[false, false, false, true, true, true, false, true, true, true, true, false, true, false, false, true, true, true, false, true]
+
+Sols18 = [false, false, false, true, true, true, false, true, true, true, true, false, true, false, false, true, true, true, false, true];
+array[Reactions] of bool:  Sols18;
+constraint sum(j in Reactions)(Zs[j] * Sols18[j]) < 12;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[3.333333333333335e-07, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 0.0, 1.333333333333334e-06, 0.0, 0.0, 0.0, 0.0, 2.666666666666668e-06, 0.0, 0.0, 0.0, 0.0, 3.333333333333335e-07, 3.333333333333335e-07, 2.666666666666668e-06]
+[false, false, false, false, false, true, false, true, false, false, false, false, true, false, false, false, false, false, false, true]
+
+Sols19 = [false, false, false, false, false, true, false, true, false, false, false, false, true, false, false, false, false, false, false, true];
+array[Reactions] of bool:  Sols19;
+constraint sum(j in Reactions)(Zs[j] * Sols19[j]) < 4;
+
+["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
+[0.0, 0.0, 0.0, 0.0, 0.0, 1.000000000000001e-06, 1.000000000000001e-06, 0.0, 0.0, 5.000000000000001e-07, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.500000000000001e-06, 0.0, 0.0, 0.0]
+[true, false, false, true, true, true, true, true, true, true, true, false, false, false, false, true, true, true, true, false]
+
+Sols20 = [true, false, false, true, true, true, true, true, true, true, true, false, false, false, false, true, true, true, true, false];
+array[Reactions] of bool:  Sols20;
+constraint sum(j in Reactions)(Zs[j] * Sols20[j]) < 13;
 
