@@ -1,4 +1,2 @@
-["Growth", "R1", "R2", "R2_rev", "R3", "R4", "R5a", "R5b", "R6", "R7", "R8", "R8_rev", "Rres", "Tc1", "Tc2", "Td", "Te", "Tf", "Th", "To2"]
-[1, 0, 0, 0, 0, 0, 0, 4, 0, 3, 0, 4, 4, 0, 0, 0, 9, 1, 5, 4]
-[true, false, false, false, false, false, false, true, false, true, false, true, true, false, false, false, true, true, true, true]
-
+None
+ZeroDivisionError('float division by zero')

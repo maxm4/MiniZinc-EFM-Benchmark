@@ -9,7 +9,7 @@ enum Reversibles = _(1..k);
 
 array[Reactions] of string: Rs;        % reactions
 array[Metabolites] of string: Ms;        % metabolites
-array[Metabolites, Reactions] of float: S;         % stoichiometry matrix
+array[Metabolites, Reactions] of int: S;         % stoichiometry matrix
 array[Reversibles, Reactions] of int: Revs;        % reversibles indicators
 
 % intermediate variables
@@ -24,6 +24,7 @@ float: epsilon = 1.0; % float flux
 int: epsilon = 1; % integer flux
 
 constraint bool_clause(Zs, []);                  % exclude trivial solution of all-zeros
+
 constraint forall(j in Reactions)  (Vs[j] >= 0);  % positive reals
 constraint forall(j in Reactions)  (Vs[j] <= 50);  %% flattening error
 constraint forall(j in Reactions)  ((Vs[j] > 0) <-> (Zs[j] == true));        % Zs is support of Vs [Zs <=> Vs > 0]

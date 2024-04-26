@@ -1,2 +1,2 @@
-{'type': 'error', 'what': 'error', 'message': '  MIPGurobiWrapper runtime error:  HostID mismatch (licensed to 71e0f077, hostid is 2842e7d0)\nMessage from caller: Could not open GUROBI environment.'}
-MiniZincError('  MIPGurobiWrapper runtime error:  HostID mismatch (licensed to 71e0f077, hostid is 2842e7d0)\nMessage from caller: Could not open GUROBI environment.')
+None
+ZeroDivisionError('float division by zero')

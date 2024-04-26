@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(prog='benchmark', description='Launch MiniZinc 
 parser.add_argument('data') 
 parser.add_argument('check') 
 parser.add_argument('outname') 
-parser.add_argument('--minimize', action='store_true')
+parser.add_argument('--minimize', action='store_true')  
 args = parser.parse_args()
 
 outname = args.outname # 'result_file.txt'
@@ -62,7 +62,7 @@ unbounded_vars = ["--allow-unbounded-vars"]
 
 ind_constr = ["-D", "fIndConstr=true", "-D", "fMIPdomains=false", "--allow-unbounded-vars"]
 
-cplex_params = ["--cplex-dll",  "/opt/ibm/ILOG/CPLEX_Studio221/cplex/bin/x86-64_linux/libcplex2210.so", "--intTol", "1e-6"]
+cplex_params = ["--cplex-dll",  "/opt/ibm/ILOG/CPLEX_Studio201/cplex/bin/x86-64_linux/libcplex2010.so", "--intTol", "1e-9", "--writeModel", "model_int.lp"]
 
 xpress_params = None #["--xpress-dll", "/opt/xpressmp/lib/libxprl.so", "--xpress-password", "/opt/xpressmp/community-xpauth.xpr"]
 
@@ -130,7 +130,7 @@ def str_support(sol, rs):
 
 efm_checker = EFMChecker(efmcheckfile)
 benchmark = {}
-for config in ['int', 'float']:
+for config in ['int']:
     for solver_name in minizinc_solvers:
         efm_checker.time = 0
         solve_time = 0
@@ -149,6 +149,7 @@ for config in ['int', 'float']:
                 inst = Instance(solver, m)
                 # Init Solving
                 inst._global_cmd_params = params[solveig]
+                python_deb = time.time()
                 deb = time.time()
                 res: Result = inst.solve()
                 end = time.time()
@@ -171,8 +172,8 @@ for config in ['int', 'float']:
                         new_sol += f"constraint sum(j in Reactions)(Zs[j] * Sols{nb_sol}[j]) < {len(support(Sol))};\n"
                         print(new_sol)
                         child.add_string(new_sol)
-                        if efm_checker.is_efm(rsupport):
-                            print("efm", rsupport)
+                        #if efm_checker.is_efm(rsupport):
+                        #    print("efm", rsupport)
                         deb = time.time()    
                         res = child.solve()
                         end = time.time()
@@ -181,8 +182,10 @@ for config in ['int', 'float']:
                             print(res.solution)
                     prev_sols.append(new_sol)
                 # End Solving
+                python_end = time.time()
                 res_time = round(solve_time, 3)
-                benchmark[solveig] = {'time': res_time, 'nb': nb_sol, 'echeck': efm_checker.time}
+                python_time = round(python_end - python_deb - res_time - efm_checker.time, 5)
+                benchmark[solveig] = {'time': res_time, 'nb': nb_sol, 'echeck': efm_checker.time, 'pytime': python_time, 'pytime:nb': python_time/nb_sol}
             except Exception as e:
                 #raise e
                 pprint.pprint(e)
